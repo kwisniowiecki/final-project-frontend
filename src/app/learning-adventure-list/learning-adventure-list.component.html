@@ -1,11 +1,8 @@
 <button routerLink="/kanban">Forward</button>
 <button routerLink="/backlog-backpack">Backlog</button>
-<p id="timeString"></p>
-<script>
-  var d = new Date();
-  document.getElementById("timeString").innerHTML = d.toISOString();
-</script>
+
 <form #adventureCardForm="ngForm">
+  <p>{{ d | date: 'shortDate' }}</p>
   <label for="subject">Subject</label>
   <select id="subject" name="subject" ngModel>
     <option value="Math">Math</option>
@@ -21,3 +18,9 @@
   <input type="text" name="description" id="description" ngModel />
   <button>Submit</button>
 </form>
+
+
+
+
+
+<!-- time and date capture happens on submit in this form -->

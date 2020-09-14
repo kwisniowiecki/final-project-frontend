@@ -1,1 +1,18 @@
-<p>adventure-card works!</p>
+<!-- This is the edit form of a learning adventure -->
+
+<form #adventureCardForm="ngForm">
+  <label for="subject">Subject</label>
+  <select id="subject" name="subject" ngModel>
+    <option value="Math">Math</option>
+    <option value="Reading">Reading</option>
+    <option value="Writing">Writing</option>
+    <option value="Social-Studies">Social Studies</option>
+    <option value="Science">Science</option>
+    <option value="Misc">Misc.</option>
+  </select>
+  <label for="title">Title</label>
+  <input type="text" name="title" id="title" ngModel />
+  <label for="description">Description</label>
+  <input type="text" name="description" id="description" ngModel />
+  <button>Submit</button>
+</form>

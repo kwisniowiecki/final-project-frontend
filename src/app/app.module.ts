@@ -15,6 +15,7 @@ import { AdventureCardComponent } from './adventure-card/adventure-card.componen
 import { BacklogBackpackComponent } from './backlog-backpack/backlog-backpack.component';
 import { CongratulationsComponent } from './congratulations/congratulations.component';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
     FormsModule,
     ChartsModule,
     DragDropModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

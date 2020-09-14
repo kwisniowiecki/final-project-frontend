@@ -9,7 +9,14 @@ import { NgForm } from '@angular/forms';
 export class LearningAdventureListComponent implements OnInit {
   constructor(private service: BackpackService) {}
 
-  ngOnInit(): void {}
+  d: any;
+  ngOnInit(): void {
+    this.newDate();
+  }
+  newDate = (): any => {
+    this.d = new Date();
+    console.log(this.d);
+  };
 }
 
 // not sure if the service should be here

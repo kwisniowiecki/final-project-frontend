@@ -1,0 +1,7 @@
+.chart-section {
+  display: flex;
+}
+
+.chart-div {
+  flex: 1;
+}

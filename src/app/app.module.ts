@@ -16,6 +16,7 @@ import { BacklogBackpackComponent } from './backlog-backpack/backlog-backpack.co
 import { CongratulationsComponent } from './congratulations/congratulations.component';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InviteBackComponent } from './invite-back/invite-back.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BacklogBackpackComponent,
     CongratulationsComponent,
     FourOhFourComponent,
+    InviteBackComponent,
   ],
   imports: [
     BrowserModule,

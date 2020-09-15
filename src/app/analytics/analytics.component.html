@@ -1,2 +1,20 @@
 <button routerLink="/home">Home</button>
 <button routerLink="/invite-back"></button>
+<section class="chart-section">
+  <div class="chart-div">
+    <canvas
+      baseChart
+      [data]="overallChartData"
+      [labels]="overallSubject"
+      [chartType]="doughnutChartType"
+    ></canvas>
+  </div>
+  <div class="chart-div">
+    <canvas
+      baseChart
+      [data]="dailyChartData"
+      [labels]="dailySubject"
+      [chartType]="doughnutChartType"
+    ></canvas>
+  </div>
+</section>

@@ -1,0 +1,48 @@
+.page-wrapper {
+  display: flex;
+  background-color: #3fc1d2;
+  height: 100vh;
+}
+.header {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 32%;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.btn {
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  width: 200px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #3fc1d2;
+  border-radius: 12px;
+}
+.kanban-board-container {
+  display: flex;
+  width: 68%;
+}
+.item {
+  height: 50px;
+  width: 100%;
+  border: 1px solid green;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.item-2 {
+  width: 32%;
+  border: 1px solid blue;
+}
+.item-3 {
+  width: 32%;
+  border: 1px solid red;
+}

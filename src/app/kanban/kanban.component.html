@@ -1,3 +1,42 @@
-<button routerLink="/adventure-card">+</button>
-<button routerLink="/timer">Edit</button>
-<button routerLink="/congratulations">Finish</button>
+<section class="page-wrapper">
+  <section class="header">
+    <button class="btn" routerLink="/adventure-card">+</button>
+    <button class="btn" routerLink="/timer">Edit</button>
+    <button class="btn" routerLink="/congratulations">Finish</button>
+  </section>
+  <section class="kanban-board-container" cdkDropListGroup>
+    <div
+      cdkDropList
+      [cdkDropListData]="numbers"
+      (cdkDropListDropped)="drop($event)"
+      #firstList="cdkDropList"
+      class="item-2"
+    >
+      <div cdkDrag *ngFor="let number of numbers" class="item">
+        {{ number }}
+      </div>
+    </div>
+    <div
+      cdkDropList
+      [cdkDropListData]="otherNumbers"
+      (cdkDropListDropped)="drop($event)"
+      #otherList="cdkDropList"
+      class="item-2"
+    >
+      <div cdkDrag *ngFor="let number of otherNumbers" class="item">
+        {{ number }}
+      </div>
+    </div>
+    <div
+      cdkDropList
+      [cdkDropListData]="doneNumbers"
+      (cdkDropListDropped)="drop($event)"
+      #doneList="cdkDropList"
+      class="item-3"
+    >
+      <div cdkDrag *ngFor="let number of doneNumbers" class="item">
+        {{ number }}
+      </div>
+    </div>
+  </section>
+</section>

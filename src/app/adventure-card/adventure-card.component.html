@@ -1,6 +1,12 @@
+<div *ngIf="!editAdventure">
+  <button (click)="setEditAdventure()">Edit</button>
+  <p>{{ adventureRef.subject }}</p>
+  <h2>{{ adventureRef.title }}</h2>
+  <p>{{ adventureRef.description }}</p>
+</div>
 <!-- This is the edit form of a learning adventure -->
 
-<form #adventureCardForm="ngForm">
+<form #adventureCardForm="ngForm" *ngIf="editAdventure">
   <label for="subject">Subject</label>
   <select id="subject" name="subject" ngModel>
     <option value="Math">Math</option>
@@ -14,5 +20,5 @@
   <input type="text" name="title" id="title" ngModel />
   <label for="description">Description</label>
   <input type="text" name="description" id="description" ngModel />
-  <button>Submit</button>
+  <button (click)="setEditAdventure()">Submit</button>
 </form>

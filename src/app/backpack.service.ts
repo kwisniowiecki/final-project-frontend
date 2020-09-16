@@ -44,10 +44,6 @@ export class BackpackService {
     return this.http.delete(`${this.url}/adventures/${id}`);
   };
 
-  // getChartData = () => {
-  //   return this.http.get(`${this.url}/adventures/charts`);
-  // };
-
   getDailyComplete = () => {
     return this.http.get(`${this.url}/adventures/dailycomplete`);
   };
@@ -70,5 +66,13 @@ export class BackpackService {
     this.mm = this.months[this.date.getMonth()];
     this.dd = this.date.getDate();
     return (this.constructedDate = `${this.mm}-${this.dd}-${this.yyyy}`);
+  };
+
+  editAdventure = (id: number, body) => {
+    return this.http.put(`${this.url}/adventures/${id}`, body);
+  };
+
+  updateCompleted = (id: number, body) => {
+    return this.http.put(`${this.url}/adventures/update/${id}`, body);
   };
 }

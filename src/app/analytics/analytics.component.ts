@@ -1,6 +1,7 @@
 import { summaryFileName } from '@angular/compiler/src/aot/util';
 import { Component, OnInit } from '@angular/core';
 import { BackpackService } from '../backpack.service';
+
 @Component({
   selector: 'app-analytics',
   templateUrl: './analytics.component.html',

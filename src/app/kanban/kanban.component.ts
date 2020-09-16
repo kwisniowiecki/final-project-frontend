@@ -4,6 +4,8 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
+import { BackpackService } from '../backpack.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-kanban',
@@ -12,13 +14,13 @@ import {
 })
 export class KanbanComponent implements OnInit {
   title = 'v7-dragdrop';
-  numbers: number[] = [];
-  otherNumbers: number[] = [];
-  doneNumbers: number[] = [];
-  constructor() {
-    for (let i = 0; i < 11; i++) {
-      this.numbers.push(i);
-    }
+  todaysAdventures: any;
+  doingAdventures: number[] = [];
+  doneAdventures: number[] = [];
+  constructor(private service: BackpackService, private router: Router) {
+    // for (let i = 0; i < 11; i++) {
+    //   this.numbers.push(i);
+    // }
   }
   drop(event: CdkDragDrop<number[]>) {
     if (event.previousContainer !== event.container) {
@@ -35,6 +37,29 @@ export class KanbanComponent implements OnInit {
         event.currentIndex
       );
     }
+    if (
+      this.todaysAdventures.length === 0 &&
+      this.doingAdventures.length === 0
+    ) {
+      this.updateCompleted(this.doneAdventures);
+      this.router.navigate(['congratulations']);
+    }
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getAdventures();
+  }
+
+  getAdventures = () => {
+    this.service.getAdventuresToGo().subscribe((response) => {
+      this.todaysAdventures = response;
+      console.log(response);
+    });
+  };
+
+  updateCompleted = (array) => {
+    array.forEach((item) => {
+      let id = item.id;
+      this.service.updateCompleted(id, item).subscribe((response) => {});
+    });
+  };
 }

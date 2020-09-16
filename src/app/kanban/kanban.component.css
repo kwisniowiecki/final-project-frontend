@@ -1,4 +1,4 @@
-.page-wrapper {
+.main-section {
   display: flex;
   background-color: #3fc1d2;
   height: 100vh;
@@ -26,10 +26,10 @@
 }
 .kanban-board-container {
   display: flex;
+  flex: 3;
   width: 68%;
 }
 .item {
-  height: 50px;
   width: 100%;
   border: 1px solid green;
   display: inline-flex;
@@ -38,11 +38,16 @@
   background-color: white;
 }
 
+.item-1 {
+  flex: 1;
+  border: 1px solid orange;
+}
+
 .item-2 {
-  width: 32%;
+  flex: 1;
   border: 1px solid blue;
 }
 .item-3 {
-  width: 32%;
+  flex: 1;
   border: 1px solid red;
 }

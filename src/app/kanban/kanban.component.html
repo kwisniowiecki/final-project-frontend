@@ -1,41 +1,47 @@
-<section class="page-wrapper">
+<section class="main-section">
   <section class="header">
-    <button class="btn" routerLink="/adventure-card">+</button>
-    <button class="btn" routerLink="/timer">Edit</button>
-    <button class="btn" routerLink="/congratulations">Finish</button>
+    <button class="btn" routerLink="/adventure-card">Quick Add+</button>
+    <button class="btn" routerLink="/timer">Edit Timer</button>
+    <button
+      class="btn"
+      routerLink="/congratulations"
+      (click)="updateCompleted(doneAdventures)"
+    >
+      Finish
+    </button>
   </section>
   <section class="kanban-board-container" cdkDropListGroup>
     <div
       cdkDropList
-      [cdkDropListData]="numbers"
+      [cdkDropListData]="todaysAdventures"
       (cdkDropListDropped)="drop($event)"
       #firstList="cdkDropList"
-      class="item-2"
+      class="item-1"
     >
-      <div cdkDrag *ngFor="let number of numbers" class="item">
-        {{ number }}
+      <div cdkDrag *ngFor="let adventure of todaysAdventures" class="item">
+        <app-adventure-card [adventureRef]="adventure"></app-adventure-card>
       </div>
     </div>
     <div
       cdkDropList
-      [cdkDropListData]="otherNumbers"
+      [cdkDropListData]="doingAdventures"
       (cdkDropListDropped)="drop($event)"
       #otherList="cdkDropList"
       class="item-2"
     >
-      <div cdkDrag *ngFor="let number of otherNumbers" class="item">
-        {{ number }}
+      <div cdkDrag *ngFor="let adventure of doingAdventures" class="item">
+        <app-adventure-card [adventureRef]="adventure"></app-adventure-card>
       </div>
     </div>
     <div
       cdkDropList
-      [cdkDropListData]="doneNumbers"
+      [cdkDropListData]="doneAdventures"
       (cdkDropListDropped)="drop($event)"
       #doneList="cdkDropList"
       class="item-3"
     >
-      <div cdkDrag *ngFor="let number of doneNumbers" class="item">
-        {{ number }}
+      <div cdkDrag *ngFor="let adventure of doneAdventures" class="item">
+        <app-adventure-card [adventureRef]="adventure"></app-adventure-card>
       </div>
     </div>
   </section>

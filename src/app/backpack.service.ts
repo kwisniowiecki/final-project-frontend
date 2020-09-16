@@ -32,6 +32,18 @@ export class BackpackService {
     return this.http.get(`${this.url}/adventures`);
   };
 
+  getAdventuresToGo = () => {
+    return this.http.get(`${this.url}/adventures/adventurestogo`);
+  };
+
+  addAdventure = (adventure: any): any => {
+    return this.http.post(`${this.url}/adventures`, adventure);
+  };
+
+  deleteAdventure = (id: number): any => {
+    return this.http.delete(`${this.url}/adventures/${id}`);
+  };
+
   // getChartData = () => {
   //   return this.http.get(`${this.url}/adventures/charts`);
   // };

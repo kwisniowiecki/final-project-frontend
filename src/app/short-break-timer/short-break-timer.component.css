@@ -1,5 +1,5 @@
 .body {
-  background-color: #3fc1d2;
+  background-color: #891CD2;
   height: 100vh;
 }
 
@@ -11,8 +11,7 @@
 }
 
 .timer-container {
-  font-size: 400px;
-  font-weight: bold;
+  font-size: 200px;
   margin-top: 40px;
   margin-bottom: 40px;
   line-height: 1;
@@ -33,13 +32,9 @@
   justify-content: center;
 }
 
-#icons {
-  font-size: 100px;
-}
-
 .btn-black {
-  width: 8em;
-  height: 8em;
+  width: 3em;
+  height: 3em;
   background: #000;
   color: #fff;
   margin: 5px;

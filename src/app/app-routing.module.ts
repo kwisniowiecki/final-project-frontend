@@ -10,12 +10,16 @@ import { AdventureCardComponent } from './adventure-card/adventure-card.componen
 import { TimerComponent } from './timer/timer.component';
 import { InviteBackComponent } from './invite-back/invite-back.component';
 import { CongratulationsComponent } from './congratulations/congratulations.component';
+import { ShortBreakTimerComponent } from './short-break-timer/short-break-timer.component';
+import { LongBreakTimerComponent } from './long-break-timer/long-break-timer.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'analytics', component: AnalyticsComponent },
   { path: 'kanban', component: KanbanComponent },
   { path: 'timer', component: TimerComponent },
+  { path: 'short-break-timer', component: ShortBreakTimerComponent },
+  { path: 'long-break-timer', component: LongBreakTimerComponent },
   { path: 'invite-back', component: InviteBackComponent },
   { path: 'congratulations', component: CongratulationsComponent },
   { path: 'adventure-card', component: AdventureCardComponent },

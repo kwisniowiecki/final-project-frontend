@@ -9,13 +9,13 @@
     </div>
     <div class="buttons">
       <button id="play" class="btn-black" (click)="startTimer()" *ngIf="status === 'STOP' || status === 'PAUSE'">
-        <i class="fas fa-play-circle" id="icons"></i>
+        <i class="fas fa-play-circle"></i>
       </button>
       <button id="pause" class="btn-black" (click)="pauseTimer()" *ngIf="status === 'RUNNING'">
-        <i class="fas fa-pause-circle" id="icons"></i>
+        <i class="fas fa-pause-circle"></i>
       </button>
       <button id="stop" class="btn-black" (click)="stopTimer()" *ngIf="status === 'RUNNING' || status === 'PAUSE'">
-        <i class="fas fa-undo" id="icons"></i>
+        <i class="fas fa-undo"></i>
       </button>
     </div>
   </div>

@@ -1,5 +1,37 @@
 <!-- Need to pull learning adventure name from API to display on top -->
-
-<button>Play</button>
-<button>Pause</button>
-<button>Reset</button>
+<section class="body">
+  <div class="container">
+    <p class="message">{{ message }}</p>
+    <div class="timer-container">
+      <div class="minutes">{{ strMinutes }}</div>
+      <div class="middle">:</div>
+      <div class="seconds">{{ strSeconds }}</div>
+    </div>
+    <div class="buttons">
+      <button
+        id="play"
+        class="btn-black"
+        (click)="startTimer()"
+        *ngIf="status === 'STOP' || status === 'PAUSE'"
+      >
+        <i class="fas fa-play-circle"></i>
+      </button>
+      <button
+        id="pause"
+        class="btn-black"
+        (click)="pauseTimer()"
+        *ngIf="status === 'RUNNING'"
+      >
+        <i class="fas fa-pause-circle"></i>
+      </button>
+      <button
+        id="stop"
+        class="btn-black"
+        (click)="stopTimer()"
+        *ngIf="status === 'RUNNING' || status === 'PAUSE'"
+      >
+        <i class="fas fa-undo"></i>
+      </button>
+    </div>
+  </div>
+</section>

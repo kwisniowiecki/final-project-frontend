@@ -1,42 +1,59 @@
-<button routerLink="/kanban">Forward</button>
-<button routerLink="/backlog-backpack">Backlog</button>
+<section class="adventure-list-container">
 
-<div>
-  <form
-    #adventureCardForm="ngForm"
-    (ngSubmit)="addAdventure(adventureCardForm)"
-  >
-    <p>{{ d | date: "longDate" }}</p>
-    <label for="subject">Subject</label>
-    <select id="subject" name="subject" ngModel>
-      <option value="Math">Math</option>
-      <option value="Reading">Reading</option>
-      <option value="Writing">Writing</option>
-      <option value="Social Studies">Social Studies</option>
-      <option value="Science">Science</option>
-      <option value="Misc">Misc.</option>
-    </select>
-    <label for="title">Title</label>
-    <input type="text" name="title" id="title" ngModel />
-    <label for="description">Description</label>
-    <input type="text" name="description" id="description" ngModel />
-    <button>Submit</button>
-  </form>
-</div>
+  <section class="header-container">
 
-<div>
-  <h1>Today's Adventures</h1>
-  <p *ngIf="adventures.length === 0">Lets go on an Adventure</p>
-  <ol>
-    <li *ngFor="let adventure of adventures">
-      <div class="adventure">
-        <h2>{{ adventure.title }}</h2>
-        <h3>{{ adventure.subject }}</h3>
-        <p>{{ adventure.description }}</p>
-        <button class="delete" (click)="deleteAdventure(adventure)">X</button>
-      </div>
-    </li>
-  </ol>
-</div>
+    <div class="title-tagline-container">
+      <h1>Backpack</h1>
+      <h2>A Homework Helper for Kids</h2>
+    </div>
+
+    <div class="btn-container">
+      <button routerLink="/kanban" class="btn">Forward</button>
+      <button routerLink="/backlog-backpack" class="btn">Backpack</button>
+    </div>
+  </section>
+
+  <section class="todays-adventures-container">
+
+    <section class="form-container">
+      <form #adventureCardForm="ngForm" (ngSubmit)="addAdventure(adventureCardForm)">
+        <h3>{{ d | date: "longDate" }}</h3>
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject" ngModel>
+          <option value="Math">Math</option>
+          <option value="Reading">Reading</option>
+          <option value="Writing">Writing</option>
+          <option value="Social Studies">Social Studies</option>
+          <option value="Science">Science</option>
+          <option value="Misc">Misc.</option>
+        </select>
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" ngModel />
+        <label for="description">Description</label>
+        <input type="text" name="description" id="description" ngModel />
+        <button>Submit</button>
+      </form>
+    </section>
+
+    <div>
+      <h3>Today's Adventures</h3>
+      <p *ngIf="adventures.length === 0">Lets go on an Adventure</p>
+      <ol>
+        <li *ngFor="let adventure of adventures">
+          <div class="adventure">
+            <h2>{{ adventure.title }}</h2>
+            <h3>{{ adventure.subject }}</h3>
+            <p>{{ adventure.description }}</p>
+            <button class="delete" (click)="deleteAdventure(adventure)">X</button>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <!-- closing section tag for todays-adventures-container -->
+  </section>
+
+  <!-- closing section tag for adventure-list-container -->
+</section>
 
 <!-- time and date capture happens on submit in this form -->

@@ -1,14 +1,20 @@
-<section class="main-section">
-  <section class="header">
-    <button class="btn" routerLink="/adventure-card">Quick Add+</button>
-    <button class="btn" routerLink="/timer">Timer</button>
-    <button
-      class="btn"
-      routerLink="/congratulations"
-      (click)="updateCompleted(doneAdventures)"
-    >
-      Finish
-    </button>
+<section class="page-wrapper">
+  <section class="header-container">
+    <div class="tagline-container">
+      <h1>Backpack</h1>
+      <h2>A Homework Helper for Kids</h2>
+    </div>
+    <div class="btn-container">
+      <button class="btn" routerLink="/adventure-card">Quick Add+</button>
+      <button class="btn" routerLink="/timer">Timer</button>
+      <button
+        class="btn"
+        routerLink="/congratulations"
+        (click)="updateCompleted(doneAdventures)"
+      >
+        Finish
+      </button>
+    </div>
   </section>
   <section class="kanban-board-container" cdkDropListGroup>
     <div

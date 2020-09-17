@@ -19,6 +19,20 @@ export class AnalyticsComponent implements OnInit {
   doughnutChartType = 'doughnut';
   dailyCompleteArray: any = [];
   completeArray: any = [];
+  chartColors: any = [
+    {
+      backgroundColor: [
+        '#3FC1D2',
+        '#FFC957',
+        '#891CD2',
+        '#B3F274',
+        '#3A3EA3',
+        '#FF3823',
+        '#FF2878',
+      ],
+    },
+  ];
+
   constructor(private service: BackpackService) {}
 
   ngOnInit(): void {

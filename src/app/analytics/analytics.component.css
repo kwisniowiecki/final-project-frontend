@@ -1,7 +1,15 @@
+.title {
+  text-align: center;
+}
+
 .chart-section {
   display: flex;
 }
 
 .chart-div {
   flex: 1;
+}
+
+.chart-title {
+  text-align: center;
 }

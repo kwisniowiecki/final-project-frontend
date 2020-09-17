@@ -1,20 +1,24 @@
 <button routerLink="/home">Home</button>
-<button routerLink="/invite-back"></button>
+<h1 class="title">Analytics</h1>
 <section class="chart-section">
   <div class="chart-div">
+    <h2 class="chart-title">To Date</h2>
     <canvas
       baseChart
       [data]="overallChartData"
       [labels]="overallSubject"
       [chartType]="doughnutChartType"
+      [colors]="chartColors"
     ></canvas>
   </div>
   <div class="chart-div">
+    <h2 class="chart-title">Today</h2>
     <canvas
       baseChart
       [data]="dailyChartData"
-      [labels]="dailySubject"
+      [labels]="overallSubject"
       [chartType]="doughnutChartType"
+      [colors]="chartColors"
     ></canvas>
   </div>
 </section>

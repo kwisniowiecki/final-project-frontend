@@ -6,6 +6,7 @@ import {
 } from '@angular/cdk/drag-drop';
 import { BackpackService } from '../backpack.service';
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-kanban',
@@ -13,15 +14,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./kanban.component.css'],
 })
 export class KanbanComponent implements OnInit {
-  title = 'v7-dragdrop';
-  todaysAdventures: any;
-  doingAdventures: number[] = [];
-  doneAdventures: number[] = [];
-  constructor(private service: BackpackService, private router: Router) {
-    // for (let i = 0; i < 11; i++) {
-    //   this.numbers.push(i);
-    // }
+  todaysAdventures: any = [];
+  doingAdventures: any = [];
+  doneAdventures: any = [];
+  constructor(private service: BackpackService, private router: Router) {}
+
+  ngOnInit(): void {
+    this.getAdventures();
   }
+
   drop(event: CdkDragDrop<number[]>) {
     if (event.previousContainer !== event.container) {
       transferArrayItem(
@@ -37,6 +38,18 @@ export class KanbanComponent implements OnInit {
         event.currentIndex
       );
     }
+
+    // console.log(event.container);
+    // console.log(event.container.element.nativeElement.className);
+    let compass: string = event.container.element.nativeElement.className;
+    if (compass.includes('item-2')) {
+      this.changeAdventureToDoing(event.container.data[event.currentIndex]);
+    } else if (compass.includes('item-3')) {
+      this.changeAdventureToFinish(event.container.data[event.currentIndex]);
+    } else {
+      this.changeAdventureToStart(event.container.data[event.currentIndex]);
+    }
+
     if (
       this.todaysAdventures.length === 0 &&
       this.doingAdventures.length === 0
@@ -45,13 +58,19 @@ export class KanbanComponent implements OnInit {
       this.router.navigate(['congratulations']);
     }
   }
-  ngOnInit(): void {
-    this.getAdventures();
-  }
 
   getAdventures = () => {
     this.service.getAdventuresToGo().subscribe((response) => {
-      this.todaysAdventures = response;
+      let returnArray: any = response;
+      returnArray.forEach((adventure) => {
+        if (adventure.location === 'doing') {
+          this.doingAdventures.push(adventure);
+        } else if (adventure.location === 'finish') {
+          this.doneAdventures.push(adventure);
+        } else {
+          this.todaysAdventures.push(adventure);
+        }
+      });
       console.log(response);
     });
   };
@@ -61,5 +80,29 @@ export class KanbanComponent implements OnInit {
       let id = item.id;
       this.service.updateCompleted(id, item).subscribe((response) => {});
     });
+  };
+
+  changeAdventureToStart = (adventure): any => {
+    console.log(adventure);
+    let id = adventure.id;
+    this.service
+      .changeAdventureToStart(id, adventure)
+      .subscribe((response) => {});
+  };
+
+  changeAdventureToDoing = (adventure): any => {
+    console.log(adventure);
+    let id = adventure.id;
+    this.service
+      .changeAdventureToDoing(id, adventure)
+      .subscribe((response) => {});
+  };
+
+  changeAdventureToFinish = (adventure): any => {
+    console.log(adventure);
+    let id = adventure.id;
+    this.service
+      .changeAdventureToFinish(id, adventure)
+      .subscribe((response) => {});
   };
 }

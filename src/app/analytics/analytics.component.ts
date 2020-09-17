@@ -46,6 +46,7 @@ export class AnalyticsComponent implements OnInit {
   getDailyComplete = () => {
     this.service.getDailyComplete().subscribe((response) => {
       this.dailyCompleteArray = response;
+      console.log(this.dailyCompleteArray);
       this.dailyCompleteArray.forEach((item) => {
         this.dailySubject.push(item.subject);
         this.dailyChartData.push(item.count);

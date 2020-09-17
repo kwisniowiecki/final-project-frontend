@@ -75,4 +75,16 @@ export class BackpackService {
   updateCompleted = (id: number, body) => {
     return this.http.put(`${this.url}/adventures/update/${id}`, body);
   };
+
+  changeAdventureToStart = (id: number, body) => {
+    return this.http.put(`${this.url}/adventures/start/${id}`, body);
+  };
+
+  changeAdventureToDoing = (id: number, body) => {
+    return this.http.put(`${this.url}/adventures/doing/${id}`, body);
+  };
+
+  changeAdventureToFinish = (id: number, body) => {
+    return this.http.put(`${this.url}/adventures/finish/${id}`, body);
+  };
 }

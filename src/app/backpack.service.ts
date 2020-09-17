@@ -28,20 +28,20 @@ export class BackpackService {
   constructedDate: any;
   constructor(private http: HttpClient) {}
 
+  getDate = () => {
+    this.date = new Date();
+    this.yyyy = this.date.getFullYear();
+    this.mm = this.months[this.date.getMonth()];
+    this.dd = this.date.getDate();
+    return (this.constructedDate = `${this.mm}-${this.dd}-${this.yyyy}`);
+  };
+
   getAdventures = () => {
     return this.http.get(`${this.url}/adventures`);
   };
 
   getAdventuresToGo = () => {
     return this.http.get(`${this.url}/adventures/adventurestogo`);
-  };
-
-  addAdventure = (adventure: any): any => {
-    return this.http.post(`${this.url}/adventures`, adventure);
-  };
-
-  deleteAdventure = (id: number): any => {
-    return this.http.delete(`${this.url}/adventures/${id}`);
   };
 
   getDailyComplete = () => {
@@ -60,12 +60,8 @@ export class BackpackService {
     return this.http.get(`${this.url}/adventures/incomplete`);
   };
 
-  getDate = () => {
-    this.date = new Date();
-    this.yyyy = this.date.getFullYear();
-    this.mm = this.months[this.date.getMonth()];
-    this.dd = this.date.getDate();
-    return (this.constructedDate = `${this.mm}-${this.dd}-${this.yyyy}`);
+  getBackpack = () => {
+    return this.http.get(`${this.url}/adventures/backpack`);
   };
 
   editAdventure = (id: number, body) => {
@@ -86,5 +82,13 @@ export class BackpackService {
 
   changeAdventureToFinish = (id: number, body) => {
     return this.http.put(`${this.url}/adventures/finish/${id}`, body);
+  };
+
+  addAdventure = (adventure: any): any => {
+    return this.http.post(`${this.url}/adventures`, adventure);
+  };
+
+  deleteAdventure = (id: number): any => {
+    return this.http.delete(`${this.url}/adventures/${id}`);
   };
 }

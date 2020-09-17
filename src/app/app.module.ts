@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InviteBackComponent } from './invite-back/invite-back.component';
 import { ShortBreakTimerComponent } from './short-break-timer/short-break-timer.component';
 import { LongBreakTimerComponent } from './long-break-timer/long-break-timer.component';
+import { AdventureListItemComponent } from './adventure-list-item/adventure-list-item.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { LongBreakTimerComponent } from './long-break-timer/long-break-timer.com
     InviteBackComponent,
     ShortBreakTimerComponent,
     LongBreakTimerComponent,
+    AdventureListItemComponent,
   ],
   imports: [
     BrowserModule,

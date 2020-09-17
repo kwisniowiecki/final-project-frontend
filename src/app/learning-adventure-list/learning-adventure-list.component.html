@@ -1,7 +1,5 @@
 <section class="adventure-list-container">
-
   <section class="header-container">
-
     <div class="title-tagline-container">
       <h1>Backpack</h1>
       <h2>A Homework Helper for Kids</h2>
@@ -14,9 +12,11 @@
   </section>
 
   <section class="todays-adventures-container">
-
     <section class="form-container">
-      <form #adventureCardForm="ngForm" (ngSubmit)="addAdventure(adventureCardForm)">
+      <form
+        #adventureCardForm="ngForm"
+        (ngSubmit)="addAdventure(adventureCardForm)"
+      >
         <h3>{{ d | date: "longDate" }}</h3>
         <label for="subject">Subject</label>
         <select id="subject" name="subject" ngModel>
@@ -40,12 +40,12 @@
       <p *ngIf="adventures.length === 0">Lets go on an Adventure</p>
       <ol>
         <li *ngFor="let adventure of adventures">
-          <div class="adventure">
-            <h2>{{ adventure.title }}</h2>
-            <h3>{{ adventure.subject }}</h3>
-            <p>{{ adventure.description }}</p>
-            <button class="delete" (click)="deleteAdventure(adventure)">X</button>
-          </div>
+          <app-adventure-list-item
+            [adventureRef]="adventure"
+          ></app-adventure-list-item
+          ><button class="delete" (click)="deleteAdventure(adventure)">
+            X
+          </button>
         </li>
       </ol>
     </div>

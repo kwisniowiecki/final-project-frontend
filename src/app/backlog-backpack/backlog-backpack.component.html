@@ -1,10 +1,16 @@
-<button routerLink="/home">Back Home</button>
-<div>
-  <h3>Backpack</h3>
-  <p *ngIf="adventures.length === 0">
-    Awesome!! you've done all your homework!!
-  </p>
+<main class="main">
+  <div class="div">
+    <h1>Backpack</h1>
+    <h2>A Homework Helper for Kids</h2>
+    <div class="btn-container">
+      <button class="btn" routerLink="/home">Back Home</button>
+    </div>
+  </div>
+
   <ol>
+    <p class="popup" *ngIf="adventures.length === 0">
+      Awesome!! you've done all your homework!!
+    </p>
     <li *ngFor="let adventure of adventures">
       <app-adventure-list-item
         [adventureRef]="adventure"
@@ -13,4 +19,4 @@
       ><button (click)="addToToday(adventure.id, adventure)">+</button>
     </li>
   </ol>
-</div>
+</main>

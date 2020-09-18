@@ -1,26 +1,37 @@
-<button routerLink="/home">Home</button>
-<h1 class="title">Report Card</h1>
-<section class="chart-section">
-  <div class="chart-div">
-    <h2 class="chart-title">To Date</h2>
-    <canvas
-      baseChart
-      [data]="overallChartData"
+<section class="homepage-container">
+
+  <section class="header-container">
+
+    <div class="title-tagline-container">
+      <h1>Backpack</h1>
+      <h2>A Homework Helper for Kids</h2>
+    </div>
+
+    <div class="btn-container">
+      <button routerLink="/home" class="btn">Home</button>
+    </div>
+  </section>
+
+  <div class="background-container">
+    <h3 class="title">My Report Card</h3>
+    <section class="chart-section">
+      <div class="chart-div">
+        <h3 class="chart-title">To-Date</h3>
+        <canvas baseChart  [data]="overallChartData"
       [labels]="labels"
       [chartType]="doughnutChartType"
       [colors]="chartColors"
-      [legend]="false"
-    ></canvas>
-  </div>
-  <div class="chart-div">
-    <h2 class="chart-title">Today</h2>
-    <canvas
-      baseChart
-      [data]="dailyChartData"
+      [legend]="false"></canvas>
+      </div>
+      <div class="chart-div">
+        <h3 class="chart-title">Today</h3>
+        <canvas  [data]="dailyChartData"
       [labels]="labels"
       [chartType]="doughnutChartType"
       [colors]="chartColors"
-      [legend]="false"
-    ></canvas>
+      [legend]="false baseChart ></canvas>
+      </div>
+    </section>
   </div>
+
 </section>

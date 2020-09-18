@@ -1,24 +1,45 @@
-<button routerLink="/home">Home</button>
-<h1 class="title">Analytics</h1>
+<!-- <h1 class="title">Analytics</h1>
 <section class="chart-section">
   <div class="chart-div">
     <h2 class="chart-title">To Date</h2>
-    <canvas
-      baseChart
-      [data]="overallChartData"
-      [labels]="overallSubject"
-      [chartType]="doughnutChartType"
-      [colors]="chartColors"
-    ></canvas>
+    <canvas baseChart [data]="overallChartData" [labels]="overallSubject" [chartType]="doughnutChartType"
+      [colors]="chartColors"></canvas>
   </div>
   <div class="chart-div">
     <h2 class="chart-title">Today</h2>
-    <canvas
-      baseChart
-      [data]="dailyChartData"
-      [labels]="overallSubject"
-      [chartType]="doughnutChartType"
-      [colors]="chartColors"
-    ></canvas>
+    <canvas baseChart [data]="dailyChartData" [labels]="overallSubject" [chartType]="doughnutChartType"
+      [colors]="chartColors"></canvas>
   </div>
+</section> -->
+
+<section class="homepage-container">
+
+  <section class="header-container">
+
+    <div class="title-tagline-container">
+      <h1>Backpack</h1>
+      <h2>A Homework Helper for Kids</h2>
+    </div>
+
+    <div class="btn-container">
+      <button routerLink="/home" class="btn">Home</button>
+    </div>
+  </section>
+
+  <div class="background-container">
+    <h3 class="title">My Report Card</h3>
+    <section class="chart-section">
+      <div class="chart-div">
+        <h3 class="chart-title">To-Date</h3>
+        <canvas baseChart [data]="overallChartData" [labels]="overallSubject" [chartType]="doughnutChartType"
+          [colors]="chartColors" class="to-date-chart"></canvas>
+      </div>
+      <div class="chart-div">
+        <h3 class="chart-title">Today</h3>
+        <canvas baseChart [data]="dailyChartData" [labels]="overallSubject" [chartType]="doughnutChartType"
+          [colors]="chartColors"></canvas>
+      </div>
+    </section>
+  </div>
+
 </section>

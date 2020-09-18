@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class BackpackService {
   url: string = `http://localhost:3000`;
+  currentAdventure: any;
   adventures: any[] = [];
   date: any;
   mm: any;
@@ -94,5 +95,13 @@ export class BackpackService {
 
   deleteAdventure = (id: number): any => {
     return this.http.delete(`${this.url}/adventures/${id}`);
+  };
+
+  setCurrentAdventure = (adventure) => {
+    this.currentAdventure = adventure;
+  };
+
+  getCurrentAdventure = () => {
+    return this.currentAdventure;
   };
 }

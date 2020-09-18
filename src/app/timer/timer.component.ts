@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BackpackService } from '../backpack.service';
 
 const timerMessages = {
   start: 'Let the countdown begin!!',
@@ -27,11 +28,15 @@ export class TimerComponent implements OnInit {
   timerId: number = null;
   status = Status.STOP;
 
-  constructor() {}
+  currentAdventure: any;
+
+  constructor(private service: BackpackService) {}
 
   ngOnInit() {
     this.message = timerMessages.start;
     this.displayTime();
+    this.currentAdventure = this.service.getCurrentAdventure();
+    console.log(this.currentAdventure);
   }
 
   countdown() {

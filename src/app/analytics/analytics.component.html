@@ -1,17 +1,3 @@
-<!-- <h1 class="title">Analytics</h1>
-<section class="chart-section">
-  <div class="chart-div">
-    <h2 class="chart-title">To Date</h2>
-    <canvas baseChart [data]="overallChartData" [labels]="overallSubject" [chartType]="doughnutChartType"
-      [colors]="chartColors"></canvas>
-  </div>
-  <div class="chart-div">
-    <h2 class="chart-title">Today</h2>
-    <canvas baseChart [data]="dailyChartData" [labels]="overallSubject" [chartType]="doughnutChartType"
-      [colors]="chartColors"></canvas>
-  </div>
-</section> -->
-
 <section class="homepage-container">
 
   <section class="header-container">
@@ -31,13 +17,19 @@
     <section class="chart-section">
       <div class="chart-div">
         <h3 class="chart-title">To-Date</h3>
-        <canvas baseChart [data]="overallChartData" [labels]="overallSubject" [chartType]="doughnutChartType"
-          [colors]="chartColors" class="to-date-chart"></canvas>
+        <canvas baseChart  [data]="overallChartData"
+      [labels]="labels"
+      [chartType]="doughnutChartType"
+      [colors]="chartColors"
+      [legend]="false"></canvas>
       </div>
       <div class="chart-div">
         <h3 class="chart-title">Today</h3>
-        <canvas baseChart [data]="dailyChartData" [labels]="overallSubject" [chartType]="doughnutChartType"
-          [colors]="chartColors"></canvas>
+        <canvas  [data]="dailyChartData"
+      [labels]="labels"
+      [chartType]="doughnutChartType"
+      [colors]="chartColors"
+      [legend]="false baseChart ></canvas>
       </div>
     </section>
   </div>

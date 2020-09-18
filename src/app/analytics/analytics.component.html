@@ -1,14 +1,15 @@
 <button routerLink="/home">Home</button>
-<h1 class="title">Analytics</h1>
+<h1 class="title">Report Card</h1>
 <section class="chart-section">
   <div class="chart-div">
     <h2 class="chart-title">To Date</h2>
     <canvas
       baseChart
       [data]="overallChartData"
-      [labels]="overallSubject"
+      [labels]="labels"
       [chartType]="doughnutChartType"
       [colors]="chartColors"
+      [legend]="false"
     ></canvas>
   </div>
   <div class="chart-div">
@@ -16,9 +17,10 @@
     <canvas
       baseChart
       [data]="dailyChartData"
-      [labels]="overallSubject"
+      [labels]="labels"
       [chartType]="doughnutChartType"
       [colors]="chartColors"
+      [legend]="false"
     ></canvas>
   </div>
 </section>

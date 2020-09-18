@@ -52,6 +52,9 @@ h2 {
 
 .background-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 68%;
   background-color: #3a3ea3;
 }

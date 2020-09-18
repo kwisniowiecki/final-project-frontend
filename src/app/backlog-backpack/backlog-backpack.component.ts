@@ -21,9 +21,10 @@ export class BacklogBackpackComponent implements OnInit {
     });
   };
 
-  deleteAdventure = (adventure) => {
-    let id: number = adventure.id;
-    this.service.deleteAdventure(id).subscribe((response) => {
+  addToToday = (id, body) => {
+    // edit the date to today from service
+    this.service.changeAdventureDateToToday(id, body).subscribe((response) => {
+      // run adventuresbackpack to repopulate the array
       this.adventuresBackpack();
     });
   };

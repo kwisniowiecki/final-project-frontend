@@ -42,10 +42,8 @@
         <li *ngFor="let adventure of adventures">
           <app-adventure-list-item
             [adventureRef]="adventure"
-          ></app-adventure-list-item
-          ><button class="delete" (click)="deleteAdventure(adventure)">
-            X
-          </button>
+            (updated)="adventuresToday()"
+          ></app-adventure-list-item>
         </li>
       </ol>
     </div>

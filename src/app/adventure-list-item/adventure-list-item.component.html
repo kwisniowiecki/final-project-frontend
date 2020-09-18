@@ -1,5 +1,34 @@
-<div class="adventure">
+<div class="adventure" *ngIf="!editAdventure">
   <h2>{{ adventureRef.title }}</h2>
   <h3>{{ adventureRef.subject }}</h3>
   <p>{{ adventureRef.description }}</p>
+  <button (click)="setEditAdventure()">Edit</button>
+  <button class="delete" (click)="deleteAdventure(adventureRef)">X</button>
 </div>
+
+<form
+  #adventureCardForm="ngForm"
+  *ngIf="editAdventure"
+  (ngSubmit)="updateAdventureCard(adventureCardForm)"
+>
+  <label for="subject">Subject</label>
+  <select id="subject" name="subject" [ngModel]="adventureRef.subject">
+    <option value="Math">Math</option>
+    <option value="Reading">Reading</option>
+    <option value="Writing">Writing</option>
+    <option value="Social Studies">Social Studies</option>
+    <option value="Science">Science</option>
+    <option value="Misc">Misc.</option>
+  </select>
+  <label for="title">Title</label>
+  <input type="text" name="title" id="title" [ngModel]="adventureRef.title" />
+  <label for="description">Description</label>
+  <input
+    type="text"
+    name="description"
+    id="description"
+    [ngModel]="adventureRef.description"
+  />
+
+  <button>Submit</button>
+</form>

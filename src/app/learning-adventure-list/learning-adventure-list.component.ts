@@ -43,13 +43,6 @@ export class LearningAdventureListComponent implements OnInit {
     });
     form.reset();
   };
-
-  deleteAdventure = (adventure) => {
-    let id: number = adventure.id;
-    this.service.deleteAdventure(id).subscribe((response) => {
-      this.adventuresToday();
-    });
-  };
 }
 
 // not sure if the service should be here

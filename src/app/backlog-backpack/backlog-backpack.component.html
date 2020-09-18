@@ -8,8 +8,9 @@
     <li *ngFor="let adventure of adventures">
       <app-adventure-list-item
         [adventureRef]="adventure"
+        (updated)="adventuresBackpack()"
       ></app-adventure-list-item
-      ><button class="delete" (click)="deleteAdventure(adventure)">X</button>
+      ><button (click)="addToToday(adventure.id, adventure)">+</button>
     </li>
   </ol>
 </div>

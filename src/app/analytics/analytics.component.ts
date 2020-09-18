@@ -47,9 +47,25 @@ export class AnalyticsComponent implements OnInit {
     this.getDate();
 
     this.getDailyComplete();
-
+    this.getDailyIncomplete();
     this.getComplete();
   }
+
+  // getDailyIncomplete
+  getDailyIncomplete = () => {
+    this.service.getDailyIncomplete().subscribe((response) => {
+      this.dailyIncomplete = response[0].count;
+      console.log(response);
+    });
+  };
+
+  // getIncomplete
+  getIncomplete = () => {
+    this.service.getIncomplete().subscribe((response) => {
+      this.totalIncomplete = response[0].total;
+      this.overallChartData.push(this.totalIncomplete);
+    });
+  };
 
   getDate = () => {
     this.todaysDate = this.service.getDate();
@@ -59,6 +75,7 @@ export class AnalyticsComponent implements OnInit {
   getDailyComplete = () => {
     this.service.getDailyComplete().subscribe((response) => {
       console.log(response);
+      // this.getDailyIncomplete();
       this.dailyCompleteArray = response;
       this.labels.forEach((label) => {
         let found = this.dailyCompleteArray.find((item) => {
@@ -70,7 +87,7 @@ export class AnalyticsComponent implements OnInit {
           this.dailyChartData.push(0);
         }
       });
-      this.getDailyIncomplete();
+      this.dailyChartData[6] = this.dailyIncomplete;
     });
   };
 
@@ -82,23 +99,6 @@ export class AnalyticsComponent implements OnInit {
         this.overallChartData.push(item.count);
       });
       this.getIncomplete();
-    });
-  };
-
-  // getDailyIncomplete
-  getDailyIncomplete = () => {
-    this.service.getDailyIncomplete().subscribe((response) => {
-      this.dailyIncomplete = response[0].count;
-      this.dailyChartData[6] = this.dailyIncomplete;
-      console.log(response);
-    });
-  };
-
-  // getIncomplete
-  getIncomplete = () => {
-    this.service.getIncomplete().subscribe((response) => {
-      this.totalIncomplete = response[0].total;
-      this.overallChartData.push(this.totalIncomplete);
     });
   };
 }

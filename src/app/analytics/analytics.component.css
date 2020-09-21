@@ -13,7 +13,6 @@
 
 .chart-div {
   flex: 1;
-  height: 100%;
 }
 
 .chart-title {
@@ -115,7 +114,6 @@ h2 {
     justify-content: center;
     align-items: center;
     flex: 1;
-    width: 32%;
     background-color: white;
     flex-direction: column;
   }
@@ -159,7 +157,7 @@ h2 {
   .background-container {
     display: flex;
     flex-direction: column;
-    width: 68%;
+    flex: 2;
     background-color: #ffdd4b;
   }
 }

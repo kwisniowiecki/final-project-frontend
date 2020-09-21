@@ -46,6 +46,7 @@ import { AdventureListItemComponent } from './adventure-list-item/adventure-list
     ChartsModule,
     DragDropModule,
     BrowserAnimationsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

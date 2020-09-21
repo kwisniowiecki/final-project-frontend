@@ -47,7 +47,6 @@ export class AnalyticsComponent implements OnInit {
     this.getDate();
     this.getDailyIncomplete();
     this.getDailyComplete();
-
     this.getComplete();
   }
 

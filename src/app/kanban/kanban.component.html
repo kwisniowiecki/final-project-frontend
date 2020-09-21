@@ -5,31 +5,49 @@
       <h2>A Homework Helper for Kids</h2>
     </div>
     <div class="btn-container">
-      <button class="btn" routerLink="/adventure-card">Quick Add+</button>
-      <button class="btn" routerLink="/timer">Timer</button>
-      <button class="btn" routerLink="/congratulations" (click)="updateCompleted(doneAdventures)">
+      <button class="btn" (click)="addQuickAdventure()">Quick Add+</button>
+      <button class="btn" routerLink="/long-break-timer">Break Timer</button>
+      <button
+        class="btn"
+        routerLink="/congratulations"
+        (click)="updateCompleted(doneAdventures)"
+      >
         Finish
       </button>
     </div>
   </section>
   <section class="kanban-board-container" cdkDropListGroup>
-
-    <div cdkDropList [cdkDropListData]="todaysAdventures" (cdkDropListDropped)="drop($event)" #firstList="cdkDropList"
-      class="item-1">
+    <div
+      cdkDropList
+      [cdkDropListData]="todaysAdventures"
+      (cdkDropListDropped)="drop($event)"
+      #firstList="cdkDropList"
+      class="item-1"
+    >
       <h3>Start</h3>
       <div cdkDrag *ngFor="let adventure of todaysAdventures" class="item">
         <app-adventure-card [adventureRef]="adventure"></app-adventure-card>
       </div>
     </div>
-    <div cdkDropList [cdkDropListData]="doingAdventures" (cdkDropListDropped)="drop($event)" #otherList="cdkDropList"
-      class="item-2">
+    <div
+      cdkDropList
+      [cdkDropListData]="doingAdventures"
+      (cdkDropListDropped)="drop($event)"
+      #otherList="cdkDropList"
+      class="item-2"
+    >
       <h3>Learning</h3>
       <div cdkDrag *ngFor="let adventure of doingAdventures" class="item">
         <app-adventure-card [adventureRef]="adventure"></app-adventure-card>
       </div>
     </div>
-    <div cdkDropList [cdkDropListData]="doneAdventures" (cdkDropListDropped)="drop($event)" #doneList="cdkDropList"
-      class="item-3">
+    <div
+      cdkDropList
+      [cdkDropListData]="doneAdventures"
+      (cdkDropListDropped)="drop($event)"
+      #doneList="cdkDropList"
+      class="item-3"
+    >
       <h3>Finished</h3>
       <div cdkDrag *ngFor="let adventure of doneAdventures" class="item">
         <app-adventure-card [adventureRef]="adventure"></app-adventure-card>

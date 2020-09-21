@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BackpackService } from '../backpack.service';
 
 const timerMessages = {
@@ -13,7 +14,7 @@ enum Status {
   RUNNING = 'RUNNING',
 }
 
-const TOTAL_SECONDS = 15 * 60;
+const TOTAL_SECONDS = 1 * 30;
 
 @Component({
   selector: 'app-timer',
@@ -29,8 +30,9 @@ export class TimerComponent implements OnInit {
   status = Status.STOP;
 
   currentAdventure: any;
+  time: number;
 
-  constructor(private service: BackpackService) {}
+  constructor(private service: BackpackService, private router: Router) {}
 
   ngOnInit() {
     this.message = timerMessages.start;
@@ -46,6 +48,15 @@ export class TimerComponent implements OnInit {
           clearInterval(this.timerId);
           this.setStatus(Status.STOP);
           this.displayTime();
+
+          this.time = this.currentAdventure.timercounter;
+
+          console.log(this.time);
+          this.time === null ? (this.time = 1) : this.time++;
+          this.currentAdventure.timercounter = this.time;
+          console.log(this.currentAdventure);
+          this.updateCounter(this.currentAdventure);
+          this.router.navigate(['short-break-timer']);
         }
         this.displayTime();
         this.totalSeconds -= 1;
@@ -95,4 +106,10 @@ export class TimerComponent implements OnInit {
         break;
     }
   }
+
+  updateCounter = (adventure): any => {
+    console.log(adventure);
+    let id = adventure.id;
+    this.service.updateCounter(id, adventure).subscribe((response) => {});
+  };
 }

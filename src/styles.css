@@ -8,7 +8,13 @@ body,
 div,
 section,
 img,
-button {
+button,
+ol,
+li,
+a,
+label,
+input,
+select {
   margin: 0;
   padding: 0;
 }
@@ -23,16 +29,13 @@ h2 {
   color: #ff3823;
 }
 
-p {
-  font-family: "Roboto", sans-serif;
-}
-
-body {
-  margin: 0;
-  padding: 0;
+body,
+p,
+.btn,
+h3 {
   font-family: "Roboto", "Helvetica Neue", sans-serif;
 }
 
 .btn {
-  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  outline: none;
 }

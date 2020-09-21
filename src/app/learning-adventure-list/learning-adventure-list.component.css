@@ -1,53 +1,83 @@
-/* Desktop Version */
-
+/* Mobile Version */
 .adventure-list-container {
   display: flex;
   height: 100vh;
+  flex-direction: column;
 }
 
 .header-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  width: 32%;
-  background-color: white;
+  width: 100%;
   flex-direction: column;
 }
 
-.title-tagline-container {
-  margin-bottom: 30px;
+.add-adventures-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.subject-title-div {
+  display: flex;
+}
+
+.subject-div,
+.title-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.subject-drop-down,
+.title-input {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 12px;
+}
+
+::placeholder,
+textarea {
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+}
+
+textarea {
+  width: 300px;
+  margin: 5px;
+  border-radius: 12px;
 }
 
 h1 {
-  align-items: center;
-  justify-content: center;
-  font-size: 60px;
+  text-align: center;
+  font-size: 50px;
   margin: 0px;
-  padding: 0px;
+  padding-top: 60px;
 }
-
 h2 {
-  font-size: 30px;
-  margin: 0px;
-  padding: 0px;
+  text-align: center;
+  font-size: 22px;
+  padding: 0;
+  margin-top: 0;
 }
-
-h3 {
-  font-size: 60px;
-  color: white;
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 20px;
 }
-
 .btn {
   display: flex;
   flex-direction: column;
   height: 50px;
   width: 200px;
-  margin: 20px;
-  justify-content: center;
+  margin: 10px;
+  margin-bottom: 10px;
   align-items: center;
-  align-content: center;
-  background-color: #FFDD4B;
+  justify-content: center;
+  background-color: #ffdd4b;
   border-radius: 12px;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   color: black;
@@ -55,16 +85,161 @@ h3 {
   font-weight: bold;
   text-shadow: black;
 }
+.background-container {
+  object-fit: cover;
+  height: 100%;
+}
 
 .todays-adventures-container {
   display: flex;
-  width: 68%;
   flex-direction: column;
+  flex: 2;
   background-color: #3a3ea3;
 }
 
-.form-container {}
+.date {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
 
-.adventure {
-  outline: 1px solid black;
+.label {
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  color: white;
+  margin: 5px;
+}
+
+.h3 {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.ordered-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Desktop Version */
+@media only screen and (min-width: 768px) {
+  .adventure-list-container {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+  }
+
+  .add-adventures-form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .subject-title-div {
+    display: flex;
+  }
+
+  .subject-div,
+  .title-div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subject-drop-down,
+  .title-input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 12px;
+  }
+
+  ::placeholder,
+  textarea {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+  }
+
+  textarea {
+    width: 300px;
+    margin: 5px;
+    border-radius: 12px;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: white;
+    flex-direction: column;
+  }
+
+  .todays-adventures-container {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    background-color: #3a3ea3;
+  }
+
+  .title-tagline-container {
+    margin-bottom: 30px;
+  }
+
+  .h1 {
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+  }
+
+  .h2 {
+    font-size: 30px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .h3 {
+    font-size: 60px;
+    color: white;
+    margin-left: 20px;
+    text-align: start;
+  }
+
+  .date {
+    font-size: 30px;
+    color: white;
+    padding: 5px;
+    margin-left: 20px;
+    text-align: start;
+  }
+
+  .label {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    color: white;
+    margin: 5px;
+  }
+
+  .btn {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    width: 200px;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: #ffdd4b;
+    border-radius: 12px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: black;
+  }
+
+  .form-btn {
+    margin-left: 5px;
+  }
 }

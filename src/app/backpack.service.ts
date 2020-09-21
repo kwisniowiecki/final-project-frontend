@@ -85,6 +85,10 @@ export class BackpackService {
     return this.http.put(`${this.url}/adventures/finish/${id}`, body);
   };
 
+  updateCounter = (id: number, body) => {
+    return this.http.put(`${this.url}/adventures/counter/${id}`, body);
+  };
+
   changeAdventureDateToToday = (id: number, body) => {
     return this.http.put(`${this.url}/adventures/update-date/${id}`, body);
   };

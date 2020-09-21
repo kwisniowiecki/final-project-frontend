@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 // const timerMessages = {
 //   start: 'Let the countdown begin!!',
@@ -27,7 +28,7 @@ export class ShortBreakTimerComponent implements OnInit {
   timerId: number = null;
   status = Status.STOP;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
     // this.message = timerMessages.start;
@@ -41,6 +42,7 @@ export class ShortBreakTimerComponent implements OnInit {
           clearInterval(this.timerId);
           this.setStatus(Status.STOP);
           this.displayTime();
+          this.router.navigate(['kanban']);
         }
         this.displayTime();
         this.totalSeconds -= 1;

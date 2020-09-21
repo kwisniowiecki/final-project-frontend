@@ -13,7 +13,6 @@
 
 .chart-div {
   flex: 1;
-  height: 100vh;
 }
 
 .chart-title {
@@ -30,7 +29,7 @@
 
 .header-container {
   display: flex;
-  width: 100vw;
+  width: 100%;
   flex-direction: column;
 }
 
@@ -83,7 +82,6 @@ h2 {
 
 /* Desktop Version */
 @media only screen and (min-width: 768px) {
-
   .title {
     text-align: center;
     color: black;
@@ -116,7 +114,6 @@ h2 {
     justify-content: center;
     align-items: center;
     flex: 1;
-    width: 32%;
     background-color: white;
     flex-direction: column;
   }
@@ -160,8 +157,7 @@ h2 {
   .background-container {
     display: flex;
     flex-direction: column;
-    width: 68%;
+    flex: 2;
     background-color: #ffdd4b;
   }
-
 }

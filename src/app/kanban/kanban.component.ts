@@ -19,9 +19,17 @@ export class KanbanComponent implements OnInit {
   doneAdventures: any = [];
   constructor(private service: BackpackService, private router: Router) {}
 
+  d: any;
+
   ngOnInit(): void {
+    this.newDate();
     this.getAdventures();
   }
+
+  newDate = (): any => {
+    this.d = this.service.getDate();
+    console.log(this.d);
+  };
 
   drop(event: CdkDragDrop<number[]>) {
     if (event.previousContainer !== event.container) {
@@ -105,4 +113,26 @@ export class KanbanComponent implements OnInit {
       .changeAdventureToFinish(id, adventure)
       .subscribe((response) => {});
   };
+
+  addQuickAdventure = () => {
+    let adventure: any = {
+      date: `${this.d}`,
+      subject: 'Misc',
+      title: 'Press Edit',
+      description: "What's your Adventure? ",
+      completed: false,
+    };
+    console.log(adventure);
+    this.service.addAdventure(adventure).subscribe((response) => {
+      this.todaysAdventures = [];
+      this.doingAdventures = [];
+      this.doneAdventures = [];
+      this.getAdventures();
+      console.log(response);
+    });
+  };
+
+  // updateKanban = () => {
+  //   this.todaysAdventures = this.todaysAdventures;
+  // };
 }

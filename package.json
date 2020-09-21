@@ -11,7 +11,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~10.0.6",
+    "@angular/animations": "^10.1.2",
     "@angular/cdk": "^10.2.0",
     "@angular/common": "~10.0.6",
     "@angular/compiler": "~10.0.6",
@@ -22,10 +22,14 @@
     "@angular/platform-browser-dynamic": "~10.0.6",
     "@angular/router": "~10.0.6",
     "@fortawesome/fontawesome-free": "^5.14.0",
+    "angular-animations": "^0.11.0",
+    "canvas-confetti": "^1.2.0",
     "chart.js": "^2.9.3",
+    "confetti-js": "0.0.18",
     "core-js": "^3.6.5",
     "ng2-charts": "^2.4.1",
     "rxjs": "~6.5.5",
+    "serve": "^11.3.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },

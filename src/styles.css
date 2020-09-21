@@ -1,5 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
+h1,
+h2,
+h3,
+p,
+body,
+div,
+section,
+img,
+button {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   font-family: "Spartan", sans-serif;
   color: #3a3ea3;
@@ -16,6 +29,7 @@ p {
 
 body {
   margin: 0;
+  padding: 0;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
 }
 

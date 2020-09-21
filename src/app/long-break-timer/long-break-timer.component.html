@@ -1,4 +1,6 @@
 <section class="body">
+  <button routerLink="/kanban">Kanban</button>
+
   <div class="container">
     <p class="message">{{ message }}</p>
     <div class="timer-container">
@@ -7,13 +9,28 @@
       <div class="seconds">{{ strSeconds }}</div>
     </div>
     <div class="buttons">
-      <button id="play" class="btn-black" (click)="startTimer()" *ngIf="status === 'STOP' || status === 'PAUSE'">
+      <button
+        id="play"
+        class="btn-black"
+        (click)="startTimer()"
+        *ngIf="status === 'STOP' || status === 'PAUSE'"
+      >
         <i class="fas fa-play-circle"></i>
       </button>
-      <button id="pause" class="btn-black" (click)="pauseTimer()" *ngIf="status === 'RUNNING'">
+      <button
+        id="pause"
+        class="btn-black"
+        (click)="pauseTimer()"
+        *ngIf="status === 'RUNNING'"
+      >
         <i class="fas fa-pause-circle"></i>
       </button>
-      <button id="stop" class="btn-black" (click)="stopTimer()" *ngIf="status === 'RUNNING' || status === 'PAUSE'">
+      <button
+        id="stop"
+        class="btn-black"
+        (click)="stopTimer()"
+        *ngIf="status === 'RUNNING' || status === 'PAUSE'"
+      >
         <i class="fas fa-undo"></i>
       </button>
     </div>

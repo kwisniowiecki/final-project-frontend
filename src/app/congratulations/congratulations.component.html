@@ -11,6 +11,13 @@
   </div>
 
   <div class="background-container">
+    <canvas #mycanvas class="confetti"></canvas>
+    <img
+      src="assets/medal1.svg"
+      alt="medal"
+      width="300"
+      [@heartBeatOnEnter]="animationState"
+    />
     <h2 class="congrats">Congratulations!</h2>
     <p>You Finished Your Tasks!</p>
   </div>

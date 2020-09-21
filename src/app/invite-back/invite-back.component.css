@@ -52,11 +52,20 @@ h2 {
 }
 
 .background-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   object-fit: cover;
   height: 100%;
-  background-color: #3A3EA3;
+  background-color: #3a3ea3;
 }
 
+.link {
+  text-align: center;
+  font-size: 10px;
+  color: #3a3ea3;
+}
 
 /* Desktop Version */
 @media only screen and (min-width: 768px) {
@@ -114,8 +123,15 @@ h2 {
 
   .background-container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 68%;
-    background-color: #3A3EA3;
+    background-color: #3a3ea3;
   }
-
+  .link {
+    text-align: center;
+    font-size: 10px;
+    color: #3a3ea3;
+  }
 }

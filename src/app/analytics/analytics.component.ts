@@ -45,9 +45,9 @@ export class AnalyticsComponent implements OnInit {
   ngOnInit(): void {
     // this.getAdventures();
     this.getDate();
-
-    this.getDailyComplete();
     this.getDailyIncomplete();
+    this.getDailyComplete();
+
     this.getComplete();
   }
 

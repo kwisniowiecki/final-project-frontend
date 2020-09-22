@@ -1,0 +1,17 @@
+.developers-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #891cd2;
+}
+
+.developers-title {
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  margin-top: 60px;
+}
+
+.image-bio-container {
+  display: flex;
+  flex-direction: column;
+}

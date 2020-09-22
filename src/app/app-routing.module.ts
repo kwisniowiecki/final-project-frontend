@@ -12,7 +12,8 @@ import { InviteBackComponent } from './invite-back/invite-back.component';
 import { CongratulationsComponent } from './congratulations/congratulations.component';
 import { ShortBreakTimerComponent } from './short-break-timer/short-break-timer.component';
 import { LongBreakTimerComponent } from './long-break-timer/long-break-timer.component';
-
+import { DevelopersComponent } from './developers/developers.component';
+import { AboutBackpackComponent } from './about-backpack/about-backpack.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'analytics', component: AnalyticsComponent },
@@ -28,6 +29,9 @@ const routes: Routes = [
     path: 'learning-adventure-list',
     component: LearningAdventureListComponent,
   },
+  { path: 'backlog-backpack', component: BacklogBackpackComponent },
+  { path: 'developers', component: DevelopersComponent },
+  { path: 'about-backpack', component: AboutBackpackComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: FourOhFourComponent },
 ];

@@ -20,6 +20,8 @@ import { InviteBackComponent } from './invite-back/invite-back.component';
 import { ShortBreakTimerComponent } from './short-break-timer/short-break-timer.component';
 import { LongBreakTimerComponent } from './long-break-timer/long-break-timer.component';
 import { AdventureListItemComponent } from './adventure-list-item/adventure-list-item.component';
+import { AboutBackpackComponent } from './about-backpack/about-backpack.component';
+import { DevelopersComponent } from './developers/developers.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { AdventureListItemComponent } from './adventure-list-item/adventure-list
     ShortBreakTimerComponent,
     LongBreakTimerComponent,
     AdventureListItemComponent,
+    AboutBackpackComponent,
+    DevelopersComponent,
   ],
   imports: [
     BrowserModule,

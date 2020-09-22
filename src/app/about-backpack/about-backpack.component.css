@@ -1,10 +1,9 @@
 /* Mobile Screen Version */
-.invite-back-container {
+.about-backpack-container {
   display: flex;
   height: 100vh;
   flex-direction: column;
 }
-
 .header-container {
   display: flex;
   width: 100%;
@@ -14,15 +13,12 @@
 h1 {
   text-align: center;
   font-size: 50px;
-  margin: 0px;
-  padding-top: 60px;
+  margin-top: 60px;
 }
 
 h2 {
   text-align: center;
   font-size: 22px;
-  padding: 0;
-  margin-top: 0;
 }
 
 .btn-container {
@@ -56,20 +52,13 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  object-fit: cover;
   height: 100%;
   background-color: #3a3ea3;
 }
 
-.link {
-  text-align: center;
-  font-size: 10px;
-  color: #3a3ea3;
-}
-
 /* Desktop Version */
 @media only screen and (min-width: 768px) {
-  .invite-back-container {
+  .about-backpack-container {
     display: flex;
     height: 100vh;
     flex-direction: row;
@@ -123,10 +112,5 @@ h2 {
     align-items: center;
     flex: 2;
     background-color: #3a3ea3;
-  }
-  .link {
-    text-align: center;
-    font-size: 10px;
-    color: #3a3ea3;
   }
 }

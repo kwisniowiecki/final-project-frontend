@@ -68,6 +68,8 @@ h3 {
 .item-3 {
   flex: 1;
   border: 1px solid white;
+  flex-grow: 1;
+  min-width: 322px;
 }
 @media only screen and (min-width: 768px) {
   .page-wrapper {
@@ -126,14 +128,5 @@ h3 {
     flex-direction: row;
     flex: 2;
     background-color: #3a3ea3;
-  }
-
-  .item {
-    width: 100%;
-    border: 1px solid black;
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: baseline;
-    background-color: white;
   }
 }

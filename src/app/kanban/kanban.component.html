@@ -25,9 +25,11 @@
       class="item-1"
     >
       <h3>Start</h3>
-      <div cdkDrag *ngFor="let adventure of todaysAdventures" class="item">
-        <app-adventure-card [adventureRef]="adventure"></app-adventure-card>
-      </div>
+      <app-adventure-card
+        cdkDrag
+        *ngFor="let adventure of todaysAdventures"
+        [adventureRef]="adventure"
+      ></app-adventure-card>
     </div>
     <div
       cdkDropList

@@ -33,7 +33,7 @@
 .title-input {
   padding: 10px;
   margin: 5px;
-  border-radius: 12px;
+  /* border-radius: 12px; */
 }
 
 ::placeholder,
@@ -44,8 +44,9 @@ textarea {
 
 textarea {
   width: 300px;
+  height: 150px;
   margin: 5px;
-  border-radius: 12px;
+  /* border-radius: 12px; */
 }
 
 h1 {
@@ -54,12 +55,14 @@ h1 {
   margin: 0px;
   padding-top: 60px;
 }
+
 h2 {
   text-align: center;
   font-size: 22px;
   padding: 0;
   margin-top: 0;
 }
+
 .btn-container {
   display: flex;
   flex-direction: column;
@@ -68,6 +71,7 @@ h2 {
   align-content: center;
   margin-bottom: 20px;
 }
+
 .btn {
   display: flex;
   flex-direction: column;
@@ -85,6 +89,7 @@ h2 {
   font-weight: bold;
   text-shadow: black;
 }
+
 .background-container {
   object-fit: cover;
   height: 100%;
@@ -120,6 +125,7 @@ h2 {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* Desktop Version */
@@ -153,7 +159,7 @@ h2 {
   .title-input {
     padding: 10px;
     margin: 5px;
-    border-radius: 12px;
+    /* border-radius: 12px; */
   }
 
   ::placeholder,
@@ -165,7 +171,7 @@ h2 {
   textarea {
     width: 300px;
     margin: 5px;
-    border-radius: 12px;
+    /* border-radius: 12px; */
   }
 
   .header-container {

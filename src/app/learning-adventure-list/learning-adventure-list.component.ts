@@ -36,6 +36,7 @@ export class LearningAdventureListComponent implements OnInit {
       title: form.value.title,
       description: form.value.description,
       completed: false,
+      timercounter: 0,
     };
     console.log(adventure);
     this.service.addAdventure(adventure).subscribe((response) => {
@@ -44,5 +45,3 @@ export class LearningAdventureListComponent implements OnInit {
     form.reset();
   };
 }
-
-// not sure if the service should be here

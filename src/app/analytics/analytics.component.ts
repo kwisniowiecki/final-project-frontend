@@ -44,26 +44,19 @@ export class AnalyticsComponent implements OnInit {
 
   //_____________________________________________________line chart
 
-  lineChartData: ChartDataSets[] = [
-    { data: [65, 59, 80, 81, 56, 55, 40, 25, 15, 34], label: 'Math' },
-    { data: [10, 12, 30, 54, 65, 23, 60, 45, 30, 20], label: 'Misc' },
-    { data: [47, 65, 58, 98, 13, 46, 22, 15, 0, 30], label: 'Reading' },
-    { data: [5, 9, 10, 0, 6, 5, 20, 30, 200, 20], label: 'Science' },
-    { data: [40, 55, 56, 81, 80, 59, 68, 75, 90, 0], label: 'Social Studies' },
-    { data: [1, 2, 3, 5, 8, 13, 21, 15, 0, 15], label: 'Writing' },
+  totalLineData: any = [];
+
+  individualLineData: any = [
+    { data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], label: 'Math' },
+    { data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], label: 'Misc' },
+    { data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], label: 'Reading' },
+    { data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], label: 'Science' },
+    { data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], label: 'Social Studies' },
+    { data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], label: 'Writing' },
   ];
-  lineChartLabels: Label[] = [
-    'date1',
-    'date2',
-    'date3',
-    'date4',
-    'date5',
-    'date6',
-    'date7',
-    'date6',
-    'date9',
-    'today',
-  ];
+
+  lineChartLabels: Label[] = [];
+
   lineChartOptions: ChartOptions | { annotation: any } = {
     responsive: true,
   };
@@ -100,6 +93,7 @@ export class AnalyticsComponent implements OnInit {
 
   ngOnInit(): void {
     // this.getAdventures();
+    this.getLineData();
     this.getDate();
     this.getDailyIncomplete();
     this.getDailyComplete();
@@ -154,6 +148,43 @@ export class AnalyticsComponent implements OnInit {
         this.overallChartData.push(item.count);
       });
       this.getIncomplete();
+    });
+  };
+
+  getLineData = () => {
+    this.service.getLineData().subscribe((response) => {
+      console.log(response);
+      this.totalLineData = response;
+      let dayCounter: number = 0;
+      let iterations: number = 0;
+      let currentDate = this.totalLineData[0].date;
+      console.log(currentDate);
+      for (let i = 0; i < this.totalLineData.length; i++) {
+        if (this.totalLineData[i].date !== currentDate) {
+          dayCounter++;
+          if (dayCounter === 10) {
+            break;
+          }
+          this.lineChartLabels[9 - dayCounter] = this.totalLineData[i].date;
+          let index: number = this.individualLineData.findIndex((item) => {
+            return item.label === this.totalLineData[i].subject;
+          });
+          this.individualLineData[index].data[
+            9 - dayCounter
+          ] = this.totalLineData[i].totalMinutes;
+          currentDate = this.totalLineData[i].date;
+        } else {
+          this.lineChartLabels[9 - dayCounter] = this.totalLineData[i].date;
+          let index: number = this.individualLineData.findIndex((item) => {
+            return item.label === this.totalLineData[i].subject;
+          });
+          this.individualLineData[index].data[
+            9 - dayCounter
+          ] = this.totalLineData[i].totalMinutes;
+        }
+      }
+      console.log(iterations);
+      console.log(this.individualLineData);
     });
   };
 }

@@ -66,6 +66,7 @@ export class AnalyticsComponent implements OnInit {
   ];
   lineChartOptions: ChartOptions | { annotation: any } = {
     responsive: true,
+    layout: { padding: { left: 100, right: 100, top: 50, bottom: 0 } },
   };
   lineChartColors: Color[] = [
     {

@@ -12,25 +12,23 @@
 
 .kanban-board-container {
   display: flex;
+  flex-direction: column;
   flex: 2;
   background-color: #3a3ea3;
 }
 
 .tagline-container {
+  margin-top: 60px;
   margin-bottom: 30px;
 }
 
 h1 {
-  font-size: 60px;
-  margin: 0px;
-  padding: 0px;
+  font-size: 50px;
   text-align: center;
 }
 
 h2 {
-  font-size: 30px;
-  margin: 0px;
-  padding: 0px;
+  font-size: 22px;
   text-align: center;
 }
 
@@ -60,10 +58,16 @@ h3 {
 
 .btn-container {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   align-content: center;
+}
+.item-1,
+.item-2,
+.item-3 {
+  flex: 1;
+  border: 1px solid white;
 }
 @media only screen and (min-width: 768px) {
   .page-wrapper {
@@ -83,20 +87,6 @@ h3 {
 
   .tagline-container {
     margin-bottom: 30px;
-  }
-
-  h1 {
-    font-size: 60px;
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 30px;
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
   }
 
   h3 {
@@ -123,8 +113,17 @@ h3 {
     text-shadow: black;
   }
 
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
   .kanban-board-container {
     display: flex;
+    flex-direction: row;
     flex: 2;
     background-color: #3a3ea3;
   }
@@ -136,12 +135,5 @@ h3 {
     justify-content: space-between;
     align-items: baseline;
     background-color: white;
-  }
-
-  .item-1,
-  .item-2,
-  .item-3 {
-    flex: 1;
-    border: 1px solid white;
   }
 }

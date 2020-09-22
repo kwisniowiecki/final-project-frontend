@@ -33,6 +33,7 @@ export class CongratulationsComponent implements OnInit {
 
   ngOnInit(): void {
     this.animate();
+    this.autoRoute();
   }
 
   animate() {
@@ -47,7 +48,13 @@ export class CongratulationsComponent implements OnInit {
     this.confetti.render();
     setTimeout(() => {
       this.confetti.clear();
-    }, 10000);
+    }, 5000);
     // Stop confetti after 5 seconds
   }
+
+  autoRoute = () => {
+    setTimeout(() => {
+      this.router.navigate(['invite-back']);
+    }, 5000); //5s
+  };
 }

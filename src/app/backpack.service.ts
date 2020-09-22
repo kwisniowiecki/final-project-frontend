@@ -65,6 +65,10 @@ export class BackpackService {
     return this.http.get(`${this.url}/adventures/backpack`);
   };
 
+  getLineData = () => {
+    return this.http.get(`${this.url}/adventures/linedata`);
+  };
+
   editAdventure = (id: number, body) => {
     return this.http.put(`${this.url}/adventures/${id}`, body);
   };

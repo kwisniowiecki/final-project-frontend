@@ -1,41 +1,86 @@
 /* Mobile Version */
+
 .container {
-  border: solid white 1px;
-  background-color: lightpink;
-  width: 468px;
+  border: solid black 1px;
+  background-color: white;
+  width: 290px;
+  padding: 10px;
+  margin: 20px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
+
+.adventure {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  text-align: center;
+}
+
 .title-delete {
   display: flex;
   justify-content: space-between;
-
   flex-direction: row;
-
-  /* width: 100%; */
 }
+
 .content {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: baseline;
 }
+
 .edit {
   width: 50px;
   display: flex;
   justify-content: center;
 }
+
 .title {
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
 }
+
 .delete {
   display: flex;
   justify-content: center;
   width: 50px;
-  flex-direction: row;
-  height: 25px;
+  flex-direction: row-reverse;
+  height: 35px;
+  background-color: #ffdd4b;
+  border-radius: 10px;
 }
+
+#icons {
+  font-size: 30px;
+  text-align: center;
+}
+
+.subject {
+  font-size: 20px;
+  text-align: left;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.edit {
+  width: 50px;
+  height: 40px;
+  background-color: #ffdd4b;
+  border-radius: 10px;
+}
+
 /* Desktop Version */
 @media only screen and (min-width: 768px) {
   .container {
@@ -43,6 +88,8 @@
     background-color: white;
     width: 350px;
     padding: 10px;
+    margin: 20px;
+    margin-right: 0px;
   }
 
   .adventure {
@@ -50,31 +97,15 @@
     flex-direction: column;
     justify-content: space-between;
   }
+
   .title-delete {
     display: flex;
     justify-content: space-between;
-
     flex-direction: row;
-
-    /* width: 100%; */
-  }
-  .title {
-    text-align: center;
-  }
-  .title-delete {
-    display: flex;
-    justify-content: space-between;
-
-    flex-direction: row;
-
-    /* width: 100%; */
   }
 
   .title {
     display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
     font-size: 30px;
   }
 
@@ -100,9 +131,11 @@
 
   .content {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: baseline;
+    padding-top: 5px;
+    padding-bottom: 10px;
   }
 
   .edit {

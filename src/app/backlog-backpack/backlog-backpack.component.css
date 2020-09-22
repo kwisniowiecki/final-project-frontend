@@ -4,23 +4,27 @@
   height: 100vh;
   flex-direction: column;
 }
+
 .header {
   display: flex;
   width: 100%;
   flex-direction: column;
 }
+
 h1 {
   text-align: center;
   font-size: 50px;
   margin: 0px;
   padding-top: 60px;
 }
+
 h2 {
   text-align: center;
   font-size: 22px;
   padding: 0;
   margin-top: 0;
 }
+
 .btn-container {
   display: flex;
   flex-direction: column;
@@ -28,6 +32,7 @@ h2 {
   align-items: center;
   align-content: center;
 }
+
 .btn {
   display: flex;
   flex-direction: column;
@@ -45,16 +50,19 @@ h2 {
   font-weight: bold;
   text-shadow: black;
 }
+
 p {
   text-align: center;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-size: 20px;
 }
+
 ol {
   background-color: #3a3ea3;
   text-align: center;
   height: 100%;
 }
+
 .list {
   object-fit: cover;
   height: 100%;
@@ -64,6 +72,7 @@ ol {
   display: flex;
   align-items: center;
 }
+
 /* Desktop Version */
 @media only screen and (min-width: 768px) {
   .main {
@@ -71,6 +80,7 @@ ol {
     flex-direction: row;
     width: 100%;
   }
+
   .header {
     display: flex;
     flex: 1;
@@ -78,6 +88,7 @@ ol {
     justify-content: center;
     align-items: center;
   }
+
   .list {
     flex: 2;
   }
@@ -89,12 +100,14 @@ ol {
     padding: 0px;
     color: #3a3ea3;
   }
+
   h2 {
     font-size: 30px;
     margin: 0px;
     padding: 0px;
     text-align: center;
   }
+
   .btn {
     display: flex;
     flex-direction: column;
@@ -111,6 +124,7 @@ ol {
     font-weight: bold;
     text-shadow: black;
   }
+
   .item-container {
     display: flex;
   }
@@ -119,11 +133,13 @@ ol {
     display: flex;
     flex-direction: row;
   }
+
   .add {
     justify-content: center;
     align-items: center;
     height: 20px;
   }
+
   ol {
     margin: 0;
     background-color: #3a3ea3;

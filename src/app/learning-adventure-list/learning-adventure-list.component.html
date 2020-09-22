@@ -17,20 +17,11 @@
       <h3 class="date">{{ d | date: "longDate" }}</h3>
     </div>
     <section class="form-container">
-      <form
-        #adventureCardForm="ngForm"
-        (ngSubmit)="addAdventure(adventureCardForm)"
-        class="add-adventures-form"
-      >
+      <form #adventureCardForm="ngForm" (ngSubmit)="addAdventure(adventureCardForm)" class="add-adventures-form">
         <div class="subject-title-div">
           <div class="subject-div">
             <label for="subject" class="label">Subject</label>
-            <select
-              id="subject"
-              name="subject"
-              class="subject-drop-down"
-              ngModel
-            >
+            <select id="subject" name="subject" class="subject-drop-down" ngModel>
               <option value="Math">Math</option>
               <option value="Reading">Reading</option>
               <option value="Writing">Writing</option>
@@ -41,25 +32,12 @@
           </div>
           <div class="title-div">
             <label for="title" class="label">Title</label>
-            <input
-              type="text"
-              name="title"
-              id="title"
-              class="title-input"
-              ngModel
-            />
+            <input type="text" name="title" id="title" class="title-input" ngModel />
           </div>
         </div>
         <div>
-          <textarea
-            name="description"
-            id="description"
-            maxlength="300"
-            cols="30"
-            rows="10"
-            placeholder="Describe your adventure"
-            ngModel
-          ></textarea>
+          <textarea name="description" id="description" maxlength="300" cols="30" rows="10"
+            placeholder="Describe your adventure" ngModel></textarea>
         </div>
         <button class="btn form-btn">Add Adventure!</button>
       </form>
@@ -69,10 +47,7 @@
         <p *ngIf="adventures.length === 0">Lets go on an Adventure</p>
         <ol class="ordered-list">
           <li *ngFor="let adventure of adventures">
-            <app-adventure-list-item
-              [adventureRef]="adventure"
-              (updated)="adventuresToday()"
-            ></app-adventure-list-item>
+            <app-adventure-list-item [adventureRef]="adventure" (updated)="adventuresToday()"></app-adventure-list-item>
           </li>
         </ol>
       </div>

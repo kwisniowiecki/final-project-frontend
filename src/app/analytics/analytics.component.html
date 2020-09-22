@@ -12,6 +12,9 @@
 
   <div class="background-container">
     <h3 class="title">My Report Card</h3>
+    <div class="legend-div">
+      <img src="assets/legend.svg" alt="legend" width="500" />
+    </div>
     <section class="chart-section">
       <div class="chart-div">
         <h3 class="chart-title">To-Date</h3>
@@ -22,17 +25,19 @@
           [chartType]="doughnutChartType"
           [colors]="chartColors"
           [legend]="false"
+          class="overall-chart"
         ></canvas>
       </div>
       <div class="chart-div">
         <h3 class="chart-title">Today</h3>
         <canvas
+          baseChart
           [data]="dailyChartData"
           [labels]="labels"
           [chartType]="doughnutChartType"
           [colors]="chartColors"
           [legend]="false"
-          baseChart
+          class="chart"
         ></canvas>
       </div>
     </section>

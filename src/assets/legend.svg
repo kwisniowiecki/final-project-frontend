@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 444.4 65.5" style="enable-background:new 0 0 444.4 65.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#3FC2D2;stroke:#000000;stroke-miterlimit:10;}
+	.st1{font-family:'Roboto-Regular';}
+	.st2{font-size:9.3928px;}
+	.st3{fill:#FFC957;stroke:#000000;stroke-miterlimit:10;}
+	.st4{font-size:10px;}
+	.st5{fill:#78499D;stroke:#000000;stroke-miterlimit:10;}
+	.st6{fill:#B7D773;stroke:#000000;stroke-miterlimit:10;}
+	.st7{fill:#EF3E2D;stroke:#000000;stroke-miterlimit:10;}
+	.st8{fill:#EE3079;stroke:#000000;stroke-miterlimit:10;}
+	.st9{fill:#3E439B;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<g>
+	<rect x="12.1" y="11" class="st0" width="48.5" height="17.8"/>
+	<text transform="matrix(1.054 0 0 1 24.9898 45.6541)" class="st1 st2">Math</text>
+	<rect x="73.6" y="10.5" class="st3" width="49" height="19"/>
+	<text transform="matrix(1 0 0 1 87.3273 45.8315)" class="st1 st4">Misc</text>
+	<rect x="132.1" y="10.5" class="st5" width="49" height="19"/>
+	<text transform="matrix(1 0 0 1 138.5248 45.8315)" class="st1 st4">Reading</text>
+	<rect x="194.4" y="10.5" class="st6" width="49" height="19"/>
+	<text transform="matrix(1 0 0 1 201.3914 45.8315)" class="st1 st4">Science</text>
+	<rect x="317.5" y="10.5" class="st7" width="49" height="19"/>
+	<text transform="matrix(1 0 0 1 326.339 45.8315)" class="st1 st4">Writing</text>
+	<rect x="377.8" y="10.5" class="st8" width="49" height="19"/>
+	<text transform="matrix(1 0 0 1 377.4041 45.8315)" class="st1 st4">Incomplete</text>
+	<rect x="256.8" y="10.5" class="st9" width="49" height="19"/>
+	<text transform="matrix(1 0 0 1 267.7432 39.8316)"><tspan x="0" y="0" class="st1 st4">Social</tspan><tspan x="-3" y="12" class="st1 st4">Studies</tspan></text>
+</g>
+</svg>

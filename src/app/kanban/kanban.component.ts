@@ -52,6 +52,7 @@ export class KanbanComponent implements OnInit {
     let compass: string = event.container.element.nativeElement.className;
     if (compass.includes('item-2')) {
       this.changeAdventureToDoing(event.container.data[event.currentIndex]);
+      // this.router.navigate(['timer']);
     } else if (compass.includes('item-3')) {
       this.changeAdventureToFinish(event.container.data[event.currentIndex]);
     } else {

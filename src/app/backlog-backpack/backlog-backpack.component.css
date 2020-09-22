@@ -111,10 +111,13 @@ ol {
     font-weight: bold;
     text-shadow: black;
   }
+  .item-container {
+    display: flex;
+  }
+
   .list-item {
     display: flex;
     flex-direction: row;
-    width: 100%;
   }
   .add {
     justify-content: center;

@@ -1,5 +1,6 @@
 import { summaryFileName } from '@angular/compiler/src/aot/util';
 import { Component, OnInit } from '@angular/core';
+import { ChartOptions } from 'chart.js';
 import { BackpackService } from '../backpack.service';
 
 @Component({

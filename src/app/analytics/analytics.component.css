@@ -1,29 +1,8 @@
 /* Mobile Screen Version */
 
-.title {
-  text-align: center;
-  color: black;
-  font-size: 40px;
-}
-
-.chart-section {
-  display: flex;
-  flex-direction: column;
-}
-
-.chart-div {
-  flex: 1;
-}
-
-.chart-title {
-  text-align: center;
-  font-size: 30px;
-  margin: 15px;
-}
-
 .homepage-container {
   display: flex;
-  /* height: 100vh; */
+  height: 100vh;
   flex-direction: column;
 }
 
@@ -31,6 +10,19 @@
   display: flex;
   width: 100%;
   flex-direction: column;
+}
+
+.title {
+  text-align: center;
+  color: black;
+  font-size: 40px;
+}
+
+.chart-title {
+  text-align: center;
+  font-size: 30px;
+  margin: 15px;
+  margin-top: 0;
 }
 
 h1 {
@@ -74,35 +66,18 @@ h2 {
 }
 
 .background-container {
-  object-fit: cover;
   height: 100%;
   background-color: #ffdd4b;
-  /* flex-direction: column; */
+}
+
+.legend-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 /* Desktop Version */
 @media only screen and (min-width: 768px) {
-  .title {
-    text-align: center;
-    color: black;
-    font-size: 40px;
-  }
-
-  .chart-section {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .chart-div {
-    flex: 1;
-  }
-
-  .chart-title {
-    text-align: center;
-    font-size: 30px;
-    margin: 15px;
-  }
-
   .homepage-container {
     display: flex;
     height: 100vh;
@@ -117,41 +92,17 @@ h2 {
     background-color: white;
     flex-direction: column;
   }
+  .chart-section {
+    display: flex;
+  }
+
+  .chart-div {
+    height: 40vh;
+    width: 40vw;
+  }
 
   .title-tagline-container {
     margin-bottom: 30px;
-  }
-
-  h1 {
-    align-items: center;
-    justify-content: center;
-    font-size: 60px;
-    margin: 0px;
-    padding: 0px;
-  }
-
-  h2 {
-    font-size: 30px;
-    margin: 0px;
-    padding: 0px;
-  }
-
-  .btn {
-    display: flex;
-    flex-direction: column;
-    height: 50px;
-    width: 200px;
-    margin: 20px;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    background-color: #ffdd4b;
-    border-radius: 12px;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
-    text-shadow: black;
   }
 
   .background-container {

@@ -27,6 +27,7 @@
 .title-div {
   display: flex;
   flex-direction: column;
+  width: 158px;
 }
 
 .subject-drop-down,
@@ -126,6 +127,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #3a3ea3;
 }
 
 /* Desktop Version */
@@ -247,5 +249,9 @@ h2 {
 
   .form-btn {
     margin-left: 5px;
+  }
+  .ordered-list {
+    justify-content: left;
+    background-color: #3a3ea3;
   }
 }

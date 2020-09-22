@@ -8,6 +8,8 @@
   margin: 20px;
   margin-right: 0px;
   margin-left: 0px;
+  word-break: break-all;
+  overflow-wrap: break-word;
 }
 
 .adventure {
@@ -30,6 +32,8 @@
   display: flex;
   flex-direction: column;
   align-items: baseline;
+}
+p {
 }
 
 .edit {
@@ -79,6 +83,8 @@
   height: 40px;
   background-color: #ffdd4b;
   border-radius: 10px;
+}
+#description {
 }
 
 /* Desktop Version */

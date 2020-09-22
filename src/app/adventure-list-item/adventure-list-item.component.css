@@ -1,16 +1,64 @@
+/* Mobile Version */
+.container {
+  border: solid white 1px;
+  background-color: lightpink;
+  width: 468px;
+}
+.title-delete {
+  display: flex;
+  justify-content: space-between;
+
+  flex-direction: row;
+
+  /* width: 100%; */
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+}
+.edit {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+}
+.title {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.delete {
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  flex-direction: row;
+  height: 25px;
+}
 /* Desktop Version */
 @media only screen and (min-width: 768px) {
   .container {
     border: solid white 1px;
     background-color: lightpink;
-    width: 350px;
+    width: 400px;
   }
   .adventure {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
+  .title-delete {
+    display: flex;
+    justify-content: space-between;
 
+    flex-direction: row;
+
+    /* width: 100%; */
+  }
+  .title {
+    text-align: center;
+  }
   .title-delete {
     display: flex;
     justify-content: space-between;
@@ -36,10 +84,12 @@
   .content {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: baseline;
   }
   .edit {
     width: 40px;
+    display: flex;
+    justify-content: center;
   }
 }

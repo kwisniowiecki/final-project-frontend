@@ -2,20 +2,16 @@
   <div class="adventure" *ngIf="!editAdventure">
     <div class="title-delete">
       <h2 class="title">{{ adventureRef.title }}</h2>
-      <button class="delete" (click)="deleteAdventure(adventureRef)">X</button>
+      <button class="delete" (click)="deleteAdventure(adventureRef)"><i class="fas fa-times" id="icons"></i></button>
     </div>
     <div class="content">
-      <h3>{{ adventureRef.subject }}</h3>
+      <h3 class="subject">{{ adventureRef.subject }}</h3>
       <p>{{ adventureRef.description }}</p>
     </div>
-    <button class="edit" (click)="setEditAdventure()">Edit</button>
+    <button class="edit" (click)="setEditAdventure()"><i class="fas fa-edit" id="icons"></i></button>
   </div>
 
-  <form
-    #adventureCardForm="ngForm"
-    *ngIf="editAdventure"
-    (ngSubmit)="updateAdventureCard(adventureCardForm)"
-  >
+  <form #adventureCardForm="ngForm" *ngIf="editAdventure" (ngSubmit)="updateAdventureCard(adventureCardForm)">
     <label for="subject">Subject</label>
     <select id="subject" name="subject" [ngModel]="adventureRef.subject">
       <option value="Math">Math</option>
@@ -28,12 +24,7 @@
     <label for="title">Title</label>
     <input type="text" name="title" id="title" [ngModel]="adventureRef.title" />
     <label for="description">Description</label>
-    <input
-      type="text"
-      name="description"
-      id="description"
-      [ngModel]="adventureRef.description"
-    />
+    <input type="text" name="description" id="description" [ngModel]="adventureRef.description" />
 
     <button>Submit</button>
   </form>

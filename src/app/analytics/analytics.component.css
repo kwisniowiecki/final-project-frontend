@@ -76,6 +76,10 @@ h2 {
   margin-top: 20px;
 }
 
+.line-chart-section {
+  display: none;
+}
+
 /* Desktop Version */
 @media only screen and (min-width: 768px) {
   .homepage-container {
@@ -110,5 +114,9 @@ h2 {
     flex-direction: column;
     flex: 2;
     background-color: #ffdd4b;
+  }
+
+  .line-chart-section {
+    display: block;
   }
 }

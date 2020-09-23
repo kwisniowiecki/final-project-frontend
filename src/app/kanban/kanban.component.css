@@ -58,14 +58,12 @@ h3 {
 
 .btn-container {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   align-content: center;
 }
 
 .column-title-start {
-  /* text-shadow: 2px 2px 5px black; */
   color: #3a3ea3;
   border-bottom: 1px solid white;
   background-color: #d0e215;
@@ -74,7 +72,6 @@ h3 {
 }
 
 .column-title-learning {
-  /* text-shadow: 2px 2px 5px black; */
   color: #3a3ea3;
   border-bottom: 1px solid white;
   background-color: #ffdd4b;
@@ -83,7 +80,6 @@ h3 {
 }
 
 .column-title-finished {
-  /* text-shadow: 2px 2px 5px black; */
   color: #3a3ea3;
   border-bottom: 1px solid white;
   background-color: #ff3823;

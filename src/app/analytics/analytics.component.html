@@ -1,19 +1,11 @@
 <section class="homepage-container">
-  <section class="header-container">
-    <div class="title-tagline-container">
-      <h1>Backpack</h1>
-      <h2>A Homework Helper for Kids</h2>
-    </div>
-
-    <div class="btn-container">
-      <button routerLink="/home" class="btn">Home</button>
-    </div>
-  </section>
-
+  <button class="home-btn" routerLink="/home">
+    <i class="fas fa-home"></i>
+  </button>
+  <h3 class="title">My Report Card</h3>
   <div class="background-container">
-    <h3 class="title">My Report Card</h3>
     <div class="legend-div">
-      <img src="assets/legend.svg" alt="legend" width="500" />
+      <img src="assets/legend.svg" alt="legend" class="img" />
     </div>
     <section class="chart-section">
       <div class="chart-div">
@@ -46,8 +38,8 @@
         <h3 class="chart-title">Time Taken Per Adventure</h3>
         <canvas
           baseChart
-          width="400"
-          height="100"
+          width="1000"
+          height="300"
           [datasets]="individualLineData"
           [labels]="lineChartLabels"
           [options]="lineChartOptions"

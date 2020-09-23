@@ -1,11 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BackpackService {
-  url: string = `http://localhost:3000`;
+  private readonly url = environment.apiBaseUrl;
   currentAdventure: any;
   adventures: any[] = [];
   date: any;

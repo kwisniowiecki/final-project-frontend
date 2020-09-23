@@ -59,7 +59,6 @@ export class AnalyticsComponent implements OnInit {
 
   lineChartOptions: ChartOptions | { annotation: any } = {
     responsive: true,
-    layout: { padding: { left: 100, right: 100, top: 50, bottom: 0 } },
   };
   lineChartColors: Color[] = [
     {
@@ -101,7 +100,6 @@ export class AnalyticsComponent implements OnInit {
     this.getComplete();
   }
 
-  // getDailyIncomplete
   getDailyIncomplete = () => {
     this.service.getDailyIncomplete().subscribe((response) => {
       this.dailyIncomplete = response[0].count;
@@ -109,7 +107,6 @@ export class AnalyticsComponent implements OnInit {
     });
   };
 
-  // getIncomplete
   getIncomplete = () => {
     this.service.getIncomplete().subscribe((response) => {
       this.totalIncomplete = response[0].total;
@@ -141,7 +138,6 @@ export class AnalyticsComponent implements OnInit {
     });
   };
 
-  // getComplete
   getComplete = () => {
     this.service.getComplete().subscribe((response) => {
       this.completeArray = response;

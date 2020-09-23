@@ -3,6 +3,9 @@
   background-color: white;
   width: 300px;
   padding: 10px;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .adventure {

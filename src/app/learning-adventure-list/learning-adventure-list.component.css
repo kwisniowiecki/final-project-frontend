@@ -130,6 +130,10 @@ h2 {
   background-color: #3a3ea3;
 }
 
+.invite {
+  margin-top: 20px;
+}
+
 /* Desktop Version */
 @media only screen and (min-width: 768px) {
   .adventure-list-container {

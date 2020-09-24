@@ -35,6 +35,7 @@ h4 {
   align-items: center;
   justify-content: center;
   margin-top: 50px;
+  background-color: #891cd2;
 }
 
 .developer {
@@ -59,6 +60,7 @@ h4 {
 
 .link {
   color: white;
+  margin: 0 5px;
 }
 
 .link:hover {

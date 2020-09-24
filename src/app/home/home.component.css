@@ -47,7 +47,6 @@ h2 {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
-  .chrome,
   .background-container {
     object-fit: cover;
     height: 100%;

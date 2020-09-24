@@ -24,12 +24,21 @@
   flex-direction: row;
 }
 
+.edit-form {
+  margin: 5px 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.field {
+  display: flex;
+  flex: 1;
+}
+
 .content {
   display: flex;
   flex-direction: column;
   align-items: baseline;
-}
-p {
 }
 
 .edit {
@@ -43,6 +52,12 @@ p {
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+
+.t {
+  font-family: "Gochi Hand", cursive;
+  color: #ff3823;
+  margin-right: 10px;
 }
 
 .delete {
@@ -65,6 +80,12 @@ p {
   text-align: left;
 }
 
+.s {
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -80,7 +101,25 @@ p {
   background-color: #ffdd4b;
   border-radius: 10px;
 }
-#description {
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  display: flex;
+  height: 50px;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffdd4b;
+  border-radius: 12px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: black;
 }
 
 /* Desktop Version */

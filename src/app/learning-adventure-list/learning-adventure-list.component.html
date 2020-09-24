@@ -29,7 +29,7 @@
               id="subject"
               name="subject"
               class="subject-drop-down"
-              ngModel
+              ngModel="Misc"
             >
               <option value="Math">Math</option>
               <option value="Reading">Reading</option>
@@ -65,8 +65,10 @@
       </form>
     </section>
     <section class="card-section">
+      <h3 *ngIf="adventures.length === 0" class="h3 invite">
+        Lets go on an Adventure!
+      </h3>
       <div class="card-div">
-        <p *ngIf="adventures.length === 0">Lets go on an Adventure</p>
         <ol class="ordered-list">
           <li *ngFor="let adventure of adventures">
             <app-adventure-list-item

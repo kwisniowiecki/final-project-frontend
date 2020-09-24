@@ -122,6 +122,7 @@ export class KanbanComponent implements OnInit {
       title: 'Press Edit',
       description: "What's your Adventure? ",
       completed: false,
+      timercounter: 0,
     };
     console.log(adventure);
     this.service.addAdventure(adventure).subscribe((response) => {

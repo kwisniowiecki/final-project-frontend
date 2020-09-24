@@ -3,12 +3,32 @@
   background-color: white;
   width: 300px;
   padding: 10px;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .adventure {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.title-delete {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.edit-form {
+  margin: 5px 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.field {
+  display: flex;
+  flex: 1;
 }
 
 .content {
@@ -27,9 +47,21 @@
   text-align: left;
 }
 
+.s {
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
 .title {
   display: flex;
   font-size: 30px;
+}
+
+.t {
+  font-family: "Gochi Hand", cursive;
+  color: #ff3823;
+  margin-right: 10px;
 }
 
 .timer {
@@ -53,6 +85,26 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  display: flex;
+  height: 50px;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffdd4b;
+  border-radius: 12px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: black;
 }
 /* Desktop Version */
 @media only screen and (min-width: 768px) {

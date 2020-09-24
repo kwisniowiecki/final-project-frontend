@@ -1,21 +1,13 @@
 <section class="homepage-container">
-  <section class="header-container">
-    <div class="title-tagline-container">
-      <h1>Backpack</h1>
-      <h2>A Homework Helper for Kids</h2>
-    </div>
-
-    <div class="btn-container">
-      <button routerLink="/home" class="btn">Home</button>
-    </div>
-  </section>
-
-  <div class="background-container">
-    <h3 class="title">My Report Card</h3>
+  <button class="home-btn" routerLink="/home">
+    <i class="fas fa-home"></i>
+  </button>
+  <h3 class="title">My Report Card</h3>
+  <section class="background-container">
     <div class="legend-div">
-      <img src="assets/legend.svg" alt="legend" width="500" />
+      <img src="assets/legend.svg" alt="legend" class="img" />
     </div>
-    <section class="chart-section">
+    <div class="chart-section">
       <div class="chart-div">
         <h3 class="chart-title">To-Date</h3>
         <canvas
@@ -40,15 +32,15 @@
           class="chart"
         ></canvas>
       </div>
-    </section>
-    <section class="line-chart-section">
+    </div>
+    <div class="line-chart-section">
       <div style="display: block">
-        <h3 class="chart-title">Time Taken Per Adventure</h3>
+        <h3 class="chart-title">Time Taken Per Subject</h3>
         <canvas
           baseChart
-          width="400"
-          height="100"
-          [datasets]="lineChartData"
+          width="1000"
+          height="300"
+          [datasets]="individualLineData"
           [labels]="lineChartLabels"
           [options]="lineChartOptions"
           [colors]="lineChartColors"
@@ -57,6 +49,7 @@
         >
         </canvas>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
+  <div class="yellow-buffer"></div>
 </section>

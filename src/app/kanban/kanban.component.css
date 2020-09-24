@@ -58,11 +58,35 @@ h3 {
 
 .btn-container {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   align-content: center;
 }
+
+.column-title-start {
+  color: #3a3ea3;
+  border-bottom: 1px solid white;
+  background-color: #d0e215;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.column-title-learning {
+  color: #3a3ea3;
+  border-bottom: 1px solid white;
+  background-color: #ffdd4b;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.column-title-finished {
+  color: #3a3ea3;
+  border-bottom: 1px solid white;
+  background-color: #ff3823;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
 .item-1,
 .item-2,
 .item-3 {

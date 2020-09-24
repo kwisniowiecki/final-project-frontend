@@ -2,30 +2,64 @@
   <div class="adventure" *ngIf="!editAdventure">
     <div class="title-delete">
       <h2 class="title">{{ adventureRef.title }}</h2>
-      <button class="delete" (click)="deleteAdventure(adventureRef)"><i class="fas fa-times" id="icons"></i></button>
+      <button class="delete" (click)="deleteAdventure(adventureRef)">
+        <i class="fas fa-times" id="icons"></i>
+      </button>
     </div>
     <div class="content">
       <h3 class="subject">{{ adventureRef.subject }}</h3>
       <p>{{ adventureRef.description }}</p>
     </div>
-    <button class="edit" (click)="setEditAdventure()"><i class="fas fa-edit" id="icons"></i></button>
+    <button class="edit" (click)="setEditAdventure()">
+      <i class="fas fa-edit" id="icons"></i>
+    </button>
   </div>
 
-  <form #adventureCardForm="ngForm" *ngIf="editAdventure" (ngSubmit)="updateAdventureCard(adventureCardForm)">
-    <label for="subject">Subject</label>
-    <select id="subject" name="subject" [ngModel]="adventureRef.subject">
-      <option value="Math">Math</option>
-      <option value="Reading">Reading</option>
-      <option value="Writing">Writing</option>
-      <option value="Social Studies">Social Studies</option>
-      <option value="Science">Science</option>
-      <option value="Misc">Misc.</option>
-    </select>
-    <label for="title">Title</label>
-    <input type="text" name="title" id="title" [ngModel]="adventureRef.title" />
-    <label for="description">Description</label>
-    <input type="text" name="description" id="description" [ngModel]="adventureRef.description" />
-
-    <button>Submit</button>
-  </form>
+  <div *ngIf="editAdventure">
+    <form
+      class="adventure"
+      #adventureCardForm="ngForm"
+      (ngSubmit)="updateAdventureCard(adventureCardForm)"
+    >
+      <div class="edit-form">
+        <label class="title t" for="title">Title</label>
+        <input
+          class="field"
+          type="text"
+          name="title"
+          id="title"
+          [ngModel]="adventureRef.title"
+        />
+      </div>
+      <div class="title-delete">
+        <label class="subject s" for="subject">Subject</label>
+        <select
+          class="field"
+          id="subject"
+          name="subject"
+          [ngModel]="adventureRef.subject"
+        >
+          <option value="Math">Math</option>
+          <option value="Reading">Reading</option>
+          <option value="Writing">Writing</option>
+          <option value="Social Studies">Social Studies</option>
+          <option value="Science">Science</option>
+          <option value="Misc">Misc.</option>
+        </select>
+      </div>
+      <div class="edit-form">
+        <label class="subject s" for="description">Description</label>
+        <input
+          class="field"
+          type="text"
+          name="description"
+          id="description"
+          [ngModel]="adventureRef.description"
+        />
+      </div>
+      <div class="btn-container">
+        <button class="btn">Submit</button>
+      </div>
+    </form>
+  </div>
 </section>

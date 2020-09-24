@@ -1,15 +1,17 @@
 <main class="main">
   <div class="header">
     <h1>Backpack</h1>
-    <h2>A Homework Helper for Kids</h2>
+    <h2>A Homework Helper just for Kids</h2>
     <div class="btn-container">
-      <button class="btn" routerLink="/home">Back Home</button>
+      <button class="btn" routerLink="/learning-adventure-list">
+        Adventures!
+      </button>
     </div>
   </div>
   <div class="list">
     <ol class="ordered-list">
       <p class="popup" *ngIf="adventures.length === 0">
-        Awesome!! you've done all your homework!!
+        Awesome!! You've finished All your Adventures!!
       </p>
       <li class="item-container" *ngFor="let adventure of adventures">
         <div class="list-item">

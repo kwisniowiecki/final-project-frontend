@@ -81,6 +81,13 @@ ol {
   justify-content: center;
 }
 
+.popup {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  margin-left: 10px;
+}
+
 /* Desktop Version */
 @media only screen and (min-width: 768px) {
   .main {

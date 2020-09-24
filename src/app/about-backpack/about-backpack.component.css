@@ -1,6 +1,5 @@
 .about-backpack-section {
-  height: 100vh;
-  background-color: #E95272;
+  background-color: #e95272;
   margin: 0;
 }
 
@@ -29,7 +28,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: #E95272;
+  background-color: #e95272;
   padding: 20px;
   margin: 0;
 }
@@ -42,7 +41,7 @@
 } */
 
 .paragraph {
-  background-color: #E95272;
+  background-color: #e95272;
   margin: 15px;
   color: white;
   font-size: 20px;
@@ -64,7 +63,7 @@
   flex-direction: column;
   justify-content: center;
   /* padding: 20px; */
-  background-color: #E95272;
+  background-color: #e95272;
   margin: 0;
   width: 100%;
   /* height: 100vh; */
@@ -101,9 +100,8 @@ a:hover {
 .buffer-div {
   height: 200px;
   width: 100%;
-  background-color: #E95272;
+  background-color: #e95272;
 }
-
 
 @media only screen and (min-width: 768px) {
   .backpack-container {

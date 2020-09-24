@@ -14,7 +14,7 @@ enum Status {
   RUNNING = 'RUNNING',
 }
 
-const TOTAL_SECONDS = 1 * 30;
+const TOTAL_SECONDS = 15 * 60;
 
 @Component({
   selector: 'app-timer',

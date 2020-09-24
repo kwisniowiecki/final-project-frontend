@@ -1,6 +1,30 @@
 .body {
-  background-color: #891CD2;
+  background-color: #891cd2;
   height: 100vh;
+  width: 100vw;
+}
+.btn-div {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+}
+.btn {
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  width: 200px;
+  /* margin: 10px;
+  margin-bottom: 10px; */
+  align-items: center;
+  justify-content: center;
+
+  background-color: #ffdd4b;
+  border-radius: 12px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: black;
 }
 
 .container {
@@ -11,11 +35,11 @@
 }
 
 .timer-container {
-  font-size: 200px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  font-size: 140px;
+  margin-top: 50px;
+  margin-bottom: 20px;
   line-height: 1;
-
+  padding: 25px;
   display: flex;
   /* border: 1px solid red; */
 }
@@ -24,6 +48,7 @@
 .middle,
 .seconds {
   padding: 15px;
+
   /* border: 1px solid green; */
 }
 
@@ -31,17 +56,96 @@
   display: flex;
   justify-content: center;
 }
-
+#icons {
+  font-size: 40px;
+  text-align: center;
+}
 .btn-black {
   width: 3em;
   height: 3em;
   background: #000;
-  color: #fff;
+  color: #000;
   margin: 5px;
   border-radius: 10px;
   font-size: 1em;
+  background-color: #ffdd4b;
+  font-size: 30px;
 }
 
 .message {
   font-size: 1.5em;
+}
+
+@media only screen and (min-width: 768px) {
+  .body {
+    background-color: #891cd2;
+    height: 100vh;
+    width: 100vw;
+  }
+  .btn {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    width: 200px;
+    /* margin: 10px;
+    margin-bottom: 10px; */
+    align-items: center;
+    justify-content: center;
+    background-color: #ffdd4b;
+    border-radius: 12px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: black;
+  }
+
+  .container {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timer-container {
+    font-size: 300px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    line-height: 1;
+
+    display: flex;
+    /* border: 1px solid red; */
+  }
+
+  .minutes,
+  .middle,
+  .seconds {
+    padding: 15px;
+
+    /* border: 1px solid green; */
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+  }
+  #icons {
+    font-size: 60px;
+    text-align: center;
+  }
+  .btn-black {
+    width: 3em;
+    height: 3em;
+    background: #000;
+    color: #000;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 1em;
+    background-color: #ffdd4b;
+    font-size: 40px;
+  }
+
+  .message {
+    font-size: 1.5em;
+  }
 }

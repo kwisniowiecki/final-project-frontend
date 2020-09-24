@@ -50,13 +50,18 @@ h2 {
   font-weight: bold;
   text-shadow: black;
 }
-
+#icons {
+  background-color: #ffdd4b;
+}
 p {
   text-align: center;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-size: 20px;
   word-break: break-all;
   overflow-wrap: break-word;
+}
+.add {
+  background-color: #ffdd4b;
 }
 
 ol {
@@ -66,30 +71,14 @@ ol {
 }
 
 .list {
+  object-fit: cover;
   height: 100%;
-  background-color: #3a3ea3;
 }
 
 .list-item {
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: #3a3ea3;
-}
-
-#icons {
-  font-size: 30px;
-  text-align: center;
-}
-
-.add {
-  display: flex;
   justify-content: center;
-  width: 50px;
-  flex-direction: row-reverse;
-  height: 35px;
-  background-color: #ffdd4b;
-  border-radius: 10px;
 }
 
 .popup {
@@ -153,22 +142,21 @@ ol {
 
   .item-container {
     display: flex;
-    background-color: #3a3ea3;
   }
 
   .list-item {
     display: flex;
     flex-direction: row;
-    background-color: #3a3ea3;
-    margin-left: 20px;
+  }
+
+  .add {
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    background-color: #ffdd4b;
   }
 
   ol {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: flex-start;
     margin: 0;
     background-color: #3a3ea3;
     width: 100%;

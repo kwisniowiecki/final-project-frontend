@@ -1,6 +1,10 @@
 <!-- Need to pull learning adventure name from API to display on top -->
 <section class="body">
-  <button routerLink="/kanban" (click)="stopTimer()">Kanban</button>
+
+  <div class="btn-div">
+    <button class="btn" routerLink="/kanban" (click)="stopTimer()>Back</button>
+  </div>
+
   <div class="container">
     <p class="message">{{ message }}</p>
     <div class="timer-container">
@@ -15,7 +19,7 @@
         (click)="startTimer()"
         *ngIf="status === 'STOP' || status === 'PAUSE'"
       >
-        <i class="fas fa-play-circle"></i>
+        <i class="fas fa-play-circle" id="icons"></i>
       </button>
       <button
         id="pause"
@@ -23,7 +27,7 @@
         (click)="pauseTimer()"
         *ngIf="status === 'RUNNING'"
       >
-        <i class="fas fa-pause-circle"></i>
+        <i class="fas fa-pause-circle" id="icons"></i>
       </button>
       <button
         id="stop"
@@ -31,7 +35,7 @@
         (click)="stopTimer()"
         *ngIf="status === 'RUNNING' || status === 'PAUSE'"
       >
-        <i class="fas fa-undo"></i>
+        <i class="fas fa-undo" id="icons"></i>
       </button>
     </div>
   </div>

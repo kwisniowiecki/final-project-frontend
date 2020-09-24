@@ -83,8 +83,10 @@ ol {
 
 .popup {
   font-size: 40px;
+  font-weight: 700;
   color: white;
   text-align: center;
+  padding-top: 100px;
   margin-left: 10px;
 }
 

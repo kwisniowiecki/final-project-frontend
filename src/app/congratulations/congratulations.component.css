@@ -42,8 +42,9 @@ h2 {
 .congrats {
   margin: 10px;
 }
-p {
+.p {
   text-align: center;
+  color: white;
 }
 
 .confetti {

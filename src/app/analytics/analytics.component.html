@@ -10,43 +10,21 @@
     <div class="chart-section">
       <div class="chart-div">
         <h3 class="chart-title">To-Date</h3>
-        <canvas
-          baseChart
-          [data]="overallChartData"
-          [labels]="labels"
-          [chartType]="doughnutChartType"
-          [colors]="chartColors"
-          [legend]="false"
-          class="overall-chart"
-        ></canvas>
+        <canvas baseChart [data]="overallChartData" [labels]="labels" [chartType]="doughnutChartType"
+          [colors]="chartColors" [legend]="false" class="overall-chart"></canvas>
       </div>
       <div class="chart-div">
         <h3 class="chart-title">Today</h3>
-        <canvas
-          baseChart
-          [data]="dailyChartData"
-          [labels]="labels"
-          [chartType]="doughnutChartType"
-          [colors]="chartColors"
-          [legend]="false"
-          class="chart"
-        ></canvas>
+        <canvas baseChart [data]="dailyChartData" [labels]="labels" [chartType]="doughnutChartType"
+          [colors]="chartColors" [legend]="false" class="chart"></canvas>
       </div>
     </div>
     <div class="line-chart-section">
       <div style="display: block">
         <h3 class="chart-title">Time Taken Per Subject</h3>
-        <canvas
-          baseChart
-          width="1000"
-          height="300"
-          [datasets]="individualLineData"
-          [labels]="lineChartLabels"
-          [options]="lineChartOptions"
-          [colors]="lineChartColors"
-          [legend]="lineChartLegend"
-          [chartType]="lineChartType"
-        >
+        <canvas baseChart width="1000" height="300" [datasets]="individualLineData" [labels]="lineChartLabels"
+          [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend"
+          [chartType]="lineChartType">
         </canvas>
       </div>
     </div>

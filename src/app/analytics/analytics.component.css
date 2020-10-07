@@ -32,6 +32,10 @@
   font-size: 40px;
 }
 
+.legend-div {
+  padding-top: 30px;
+}
+
 .img {
   width: 375px;
 }
@@ -53,6 +57,10 @@
     width: 100vw;
   }
 
+  .legend-div {
+    padding-top: 30px;
+  }
+
   .yellow-buffer {
     height: 100px;
     background-color: #ffdd4b;
@@ -65,6 +73,7 @@
   .img {
     width: 500px;
   }
+
   .chart-section {
     display: flex;
   }

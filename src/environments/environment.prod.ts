@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBaseUrl: 'https://backpack4kids.herokuapp.com',
+  apiBaseUrl: 'https://backpack-four-kids.herokuapp.com',
 };

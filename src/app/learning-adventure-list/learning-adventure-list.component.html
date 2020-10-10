@@ -1,8 +1,8 @@
 <section class="adventure-list-container">
-  <section class="header-container">
-    <div class="title-tagline-container">
-      <h1 class="h1">Backpack</h1>
-      <h2 class="h2">A Homework Helper just for Kids</h2>
+  <section class="sidenav">
+    <div class="logo-container">
+      <h1 class="backpack-title">Backpack</h1>
+      <h2 class="backpack-tagline">A Homework Helper just for Kids</h2>
     </div>
 
     <div class="btn-container">
@@ -12,8 +12,8 @@
   </section>
 
   <section class="todays-adventures-container">
-    <div>
-      <h3 class="h3">Today's Adventures</h3>
+    <div class="todays-adventures-div">
+      <h3 class="todays-adventures-title">Today's Adventures</h3>
       <h3 class="date">{{ d | date: "longDate" }}</h3>
     </div>
     <section class="form-container">
@@ -65,7 +65,7 @@
       </form>
     </section>
     <section class="card-section">
-      <h3 *ngIf="adventures.length === 0" class="h3 invite">
+      <h3 *ngIf="adventures.length === 0" class="lets-go invite">
         Lets go on an Adventure!
       </h3>
       <div class="card-div">
@@ -79,11 +79,5 @@
         </ol>
       </div>
     </section>
-
-    <!-- closing section tag for todays-adventures-container -->
   </section>
-
-  <!-- closing section tag for adventure-list-container -->
 </section>
-
-<!-- time and date capture happens on submit in this form -->

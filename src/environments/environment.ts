@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   // apiBaseUrl: 'http://localhost:3000',
-  apiBaseUrl: 'https://backpack4kids.herokuapp.com',
+  apiBaseUrl: 'https://backpack-four-kids.herokuapp.com',
 };
 
 /*
